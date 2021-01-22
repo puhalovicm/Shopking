@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Shopking</string>
+    <string name="menu_item_catalogoue_item_title">Catalogoue</string>
+    <string name="menu_item_shopping_list_item_title">Shopping List</string>
+    <string name="menu_item_wish_list_item_title">Wish List</string>
+    <string name="menu_item_recipes_item_title">Recipes</string>
+    <string name="menu_item_information_item_title">Information</string>
 </resources>

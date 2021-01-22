@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ic_launcher_background">#CCE6F4</color>
+    <dimen name="bottom_navigation_corner_radius">20dp</dimen>
 </resources>

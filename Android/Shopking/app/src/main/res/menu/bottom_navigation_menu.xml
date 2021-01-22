@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_navigation_catalogoue_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_catalouge_blue"
+        android:title="@string/menu_item_catalogoue_item_title" />
+    <item
+        android:id="@+id/bottom_navigation_shopping_list_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_shopping_list_blue"
+        android:title="@string/menu_item_shopping_list_item_title" />
+    <item
+        android:id="@+id/bottom_navigation_wish_list_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_wish_list_blue"
+        android:title="@string/menu_item_wish_list_item_title" />
+    <item
+        android:id="@+id/bottom_navigation_recipes_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_recipe_blue"
+        android:title="@string/menu_item_recipes_item_title" />
+    <item
+        android:id="@+id/bottom_navigation_information_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings_blue"
+        android:title="@string/menu_item_information_item_title" />
+</menu>
