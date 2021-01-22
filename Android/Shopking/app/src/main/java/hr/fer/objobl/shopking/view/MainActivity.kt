@@ -2,8 +2,10 @@ package hr.fer.objobl.shopking.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import hr.fer.objobl.shopking.R
 import hr.fer.objobl.shopking.databinding.ActivityMainBinding
+import hr.fer.objobl.shopking.model.ScreenType
 import hr.fer.objobl.shopking.navigation.NavigationManager
 import hr.fer.objobl.shopking.viewmodel.MainActivityViewModel
 import org.koin.android.ext.android.inject
@@ -22,6 +24,15 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        setupBottomNavigation()
+    }
+
+    private fun setupBottomNavigation() {
+        setupOnNavigationItemSelectedListener()
+        registerBottomNavigationObserver()
+    }
+
+    private fun setupOnNavigationItemSelectedListener() {
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.bottom_navigation_catalogoue_item -> {
@@ -47,5 +58,23 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    private fun registerBottomNavigationObserver() {
+        val nameObserver = Observer<ScreenType> { type ->
+            if (binding.bottomNavigation.selectedItemId != getScreenTypeId(type)) {
+                binding.bottomNavigation.selectedItemId = getScreenTypeId(type)
+            }
+        }
+
+        model.screenType.observe(this, nameObserver)
+    }
+
+    private fun getScreenTypeId(type: ScreenType) = when (type) {
+        ScreenType.CATALOGOUE -> R.id.bottom_navigation_catalogoue_item
+        ScreenType.SHOPPING_LIST -> R.id.bottom_navigation_shopping_list_item
+        ScreenType.WISH_LIST -> R.id.bottom_navigation_wish_list_item
+        ScreenType.RECIPES -> R.id.bottom_navigation_recipes_item
+        ScreenType.INFORMATION -> R.id.bottom_navigation_information_item
     }
 }
