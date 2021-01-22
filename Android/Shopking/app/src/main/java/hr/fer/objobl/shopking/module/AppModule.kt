@@ -1,7 +1,21 @@
 package hr.fer.objobl.shopking.module
 
+import androidx.appcompat.app.AppCompatActivity
+import hr.fer.objobl.shopking.navigation.NavigationManager
+import hr.fer.objobl.shopking.navigation.NavigationManagerImpl
+import hr.fer.objobl.shopking.viewmodel.MainActivityViewModel
+import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val applicationModule = module {
 
+    factory<NavigationManager> {
+        val activity: AppCompatActivity = it[0]
+        NavigationManagerImpl(activity)
+    }
+
+    viewModel {
+        val navigationManager: NavigationManager = it[0]
+        MainActivityViewModel(navigationManager)
+    }
 }
