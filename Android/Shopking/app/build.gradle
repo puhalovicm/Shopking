@@ -60,4 +60,6 @@ dependencies {
     implementation "com.facebook.shimmer:shimmer:$shimmer_layout_version"
     implementation "androidx.percentlayout:percentlayout:$percent_layout_version"
     implementation "com.google.android.material:material:$material_version"
+    implementation "org.koin:koin-android-viewmodel:2.1.6"
+    implementation "org.koin:koin-android:2.1.6"
 }
