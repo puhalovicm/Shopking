@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="bottom_navigation_corner_radius">20dp</dimen>
+
+    <dimen name="article_list_item_height">200dp</dimen>
+    <dimen name="article_list_item_icon_height">80dp</dimen>
+    <dimen name="article_list_item_elevation">5dp</dimen>
+    <dimen name="article_list_item_corner_radius">10dp</dimen>
+    <dimen name="article_list_item_name_text_size">18sp</dimen>
+    <dimen name="article_list_item_description_text_size">12sp</dimen>
+    <dimen name="article_list_item_price_text_size">12sp</dimen>
+    <dimen name="article_list_item_sale_text_size">24sp</dimen>
+    <dimen name="article_list_item_text_margin_horizontal">10dp</dimen>
+    <dimen name="article_list_item_name_margin_top">10dp</dimen>
+    <dimen name="article_list_item_description_margin_top">8dp</dimen>
+    <dimen name="article_list_item_sale_background_corner_radius">10dp</dimen>
+    <dimen name="article_list_item_sale_icon_margin_end">10dp</dimen>
+    <dimen name="article_list_item_sale_icon_margin_top">10dp</dimen>
+    <dimen name="article_list_item_sale_icon_padding_vertical">10dp</dimen>
+    <dimen name="article_list_item_sale_icon_padding_horizontal">20dp</dimen>
+
+    <dimen name="article_grid_item_offset">10dp</dimen>
 </resources>

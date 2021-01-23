@@ -1,7 +1,7 @@
 package hr.fer.objobl.shopking.model
 
 enum class ScreenType {
-    CATALOGOUE,
+    CATALOGUE,
     SHOPPING_LIST,
     WISH_LIST,
     RECIPES,

@@ -1,9 +1,33 @@
 <resources>
-    <!-- Base application theme. -->
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/shopking_blue</item>
         <item name="colorPrimaryDark">@color/shopking_dark_blue</item>
         <item name="colorAccent">@color/shopking_red</item>
     </style>
+
+    <style name="ArticleName">
+        <item name="android:textSize">@dimen/article_list_item_name_text_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
+    <style name="ArticleDescription">
+        <item name="android:textSize">@dimen/article_list_item_description_text_size</item>
+        <item name="android:textColor">@color/medium_black</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
+    <style name="ArticlePrice">
+        <item name="android:textSize">@dimen/article_list_item_price_text_size</item>
+        <item name="android:textColor">@color/shopking_dark_blue</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
+    <style name="ArticleSale">
+        <item name="android:textSize">@dimen/article_list_item_sale_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
 </resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="@color/shopking_medium_blue" />
+    <corners android:radius="@dimen/article_list_item_sale_background_corner_radius" />
+</shape>

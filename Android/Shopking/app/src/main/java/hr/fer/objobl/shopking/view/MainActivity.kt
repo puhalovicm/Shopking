@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity() {
     private fun setupOnNavigationItemSelectedListener() {
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.bottom_navigation_catalogoue_item -> {
-                    model.showCatalogoueScreen()
+                R.id.bottom_navigation_catalogue_item -> {
+                    model.showCatalogueScreen()
                     true
                 }
                 R.id.bottom_navigation_shopping_list_item -> {
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getScreenTypeId(type: ScreenType) = when (type) {
-        ScreenType.CATALOGOUE -> R.id.bottom_navigation_catalogoue_item
+        ScreenType.CATALOGUE -> R.id.bottom_navigation_catalogue_item
         ScreenType.SHOPPING_LIST -> R.id.bottom_navigation_shopping_list_item
         ScreenType.WISH_LIST -> R.id.bottom_navigation_wish_list_item
         ScreenType.RECIPES -> R.id.bottom_navigation_recipes_item

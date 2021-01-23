@@ -2,7 +2,7 @@ package hr.fer.objobl.shopking.navigation
 
 interface NavigationManager {
 
-    fun showCatalogoueScreen()
+    fun showCatalogueScreen()
 
     fun showShoppingListScreen()
 

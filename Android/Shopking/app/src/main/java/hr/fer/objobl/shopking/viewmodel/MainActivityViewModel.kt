@@ -2,6 +2,7 @@ package hr.fer.objobl.shopking.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import hr.fer.objobl.shopking.common.DistinctUntilChangedMutableLiveData
 import hr.fer.objobl.shopking.model.ScreenType
 import hr.fer.objobl.shopking.navigation.NavigationManager
 
@@ -9,11 +10,11 @@ class MainActivityViewModel(
     private val navigationManager: NavigationManager
 ) : ViewModel() {
 
-    val screenType: MutableLiveData<ScreenType> by lazy { MutableLiveData(ScreenType.CATALOGOUE) }
+    val screenType: MutableLiveData<ScreenType> by lazy { DistinctUntilChangedMutableLiveData(ScreenType.CATALOGUE) }
 
-    fun showCatalogoueScreen() {
-        screenType.value = ScreenType.CATALOGOUE
-        navigationManager.showCatalogoueScreen()
+    fun showCatalogueScreen() {
+        screenType.value = ScreenType.CATALOGUE
+        navigationManager.showCatalogueScreen()
     }
 
     fun showShoppingListScreen() {
