@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Shopking.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/shops")]
     public class ShopController : ControllerBase
     {
         public ShopController()
@@ -17,11 +17,10 @@ namespace Shopking.Controllers
         [HttpGet]
         public IEnumerable<Shop> Get()
         {
-            using (ISession session = NHibernateSession.OpenSession())  // Open a session to conect to the database
+            using (ISession session = NHibernateSession.OpenSession()) 
             {
                 return session.Query<Shop>().ToList();
             }
-            //return _dataAccessProvider.GetShops();
         }
     }
 }
