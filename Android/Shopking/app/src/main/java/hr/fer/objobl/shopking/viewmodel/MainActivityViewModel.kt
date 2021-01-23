@@ -12,28 +12,35 @@ class MainActivityViewModel(
 
     val screenType: MutableLiveData<ScreenType> by lazy { DistinctUntilChangedMutableLiveData(ScreenType.CATALOGUE) }
 
-    fun showCatalogueScreen() {
-        screenType.value = ScreenType.CATALOGUE
+    fun setScreenType(type: ScreenType) {
+        screenType.value = type
+    }
+
+    fun showScreen(type: ScreenType) = when (type) {
+        ScreenType.CATALOGUE -> showCatalogueScreen()
+        ScreenType.SHOPPING_LIST -> showShoppingListScreen()
+        ScreenType.WISH_LIST -> showWishListScreen()
+        ScreenType.RECIPES -> showRecipesScreen()
+        ScreenType.INFORMATION -> showInformationScreen()
+    }
+
+    private fun showCatalogueScreen() {
         navigationManager.showCatalogueScreen()
     }
 
-    fun showShoppingListScreen() {
-        screenType.value = ScreenType.SHOPPING_LIST
+    private fun showShoppingListScreen() {
         navigationManager.showShoppingListScreen()
     }
 
-    fun showWishListScreen() {
-        screenType.value = ScreenType.WISH_LIST
+    private fun showWishListScreen() {
         navigationManager.showWishListScreen()
     }
 
-    fun showRecipesScreen() {
-        screenType.value = ScreenType.RECIPES
+    private fun showRecipesScreen() {
         navigationManager.showRecipesScreen()
     }
 
-    fun showInformationScreen() {
-        screenType.value = ScreenType.INFORMATION
+    private fun showInformationScreen() {
         navigationManager.showInformationScreen()
     }
 }

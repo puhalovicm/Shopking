@@ -36,23 +36,23 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.bottom_navigation_catalogue_item -> {
-                    model.showCatalogueScreen()
+                    model.setScreenType(ScreenType.CATALOGUE)
                     true
                 }
                 R.id.bottom_navigation_shopping_list_item -> {
-                    model.showShoppingListScreen()
+                    model.setScreenType(ScreenType.SHOPPING_LIST)
                     true
                 }
                 R.id.bottom_navigation_wish_list_item -> {
-                    model.showWishListScreen()
+                    model.setScreenType(ScreenType.WISH_LIST)
                     true
                 }
                 R.id.bottom_navigation_recipes_item -> {
-                    model.showRecipesScreen()
+                    model.setScreenType(ScreenType.RECIPES)
                     true
                 }
                 R.id.bottom_navigation_information_item -> {
-                    model.showInformationScreen()
+                    model.setScreenType(ScreenType.INFORMATION)
                     true
                 }
                 else -> false
@@ -65,6 +65,8 @@ class MainActivity : AppCompatActivity() {
             if (binding.bottomNavigation.selectedItemId != getScreenTypeId(type)) {
                 binding.bottomNavigation.selectedItemId = getScreenTypeId(type)
             }
+
+            model.showScreen(type)
         }
 
         model.screenType.observe(this, nameObserver)
