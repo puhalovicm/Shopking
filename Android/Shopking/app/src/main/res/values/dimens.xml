@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="bottom_navigation_corner_radius">20dp</dimen>
+    <dimen name="toolbar_corner_radius">10dp</dimen>
 
     <dimen name="article_list_item_height">200dp</dimen>
     <dimen name="article_list_item_icon_height">80dp</dimen>
@@ -26,4 +27,8 @@
     <dimen name="category_item_padding_horizontal">20dp</dimen>
     <dimen name="category_item_offset">20dp</dimen>
     <dimen name="category_item_corner_radius">60dp</dimen>
+
+    <dimen name="toolbar_title_text_size">36sp</dimen>
+    <dimen name="toolbar_title_margin_top">20dp</dimen>
+    <dimen name="toolbar_title_margin_bottom">30dp</dimen>
 </resources>

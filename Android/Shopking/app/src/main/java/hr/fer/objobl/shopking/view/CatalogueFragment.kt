@@ -84,6 +84,12 @@ class CatalogueFragment : Fragment(R.layout.fragment_catalogue) {
         setupCategoryList()
         setupArticleGrid()
         setupSwipeRefreshLayout()
+        setupToolbar()
+    }
+
+    private fun setupToolbar() {
+        binding.catalogueToolbar.toolbarTitle.text = resources.getString(R.string.toolbar_catalogue_title)
+        binding.catalogueToolbar.toolbarIcon.setImageResource(R.drawable.ic_catalouge_red)
     }
 
     private fun setupSwipeRefreshLayout() {

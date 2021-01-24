@@ -8,4 +8,6 @@
 
     <string name="article_list_item_image_description">Article image</string>
     <string name="article_list_sale">%</string>
+
+    <string name="toolbar_catalogue_title">Catalogue</string>
 </resources>

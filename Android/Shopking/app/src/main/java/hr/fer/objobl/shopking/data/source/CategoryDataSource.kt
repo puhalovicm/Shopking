@@ -9,14 +9,18 @@ class CategoryDataSource {
         listOf(
             Category(
                 1,
-                "Food"
+                "All"
             ),
             Category(
                 2,
-                "Beverage"
+                "Food"
             ),
             Category(
                 3,
+                "Beverage"
+            ),
+            Category(
+                4,
                 "Tech"
             ),
         )
