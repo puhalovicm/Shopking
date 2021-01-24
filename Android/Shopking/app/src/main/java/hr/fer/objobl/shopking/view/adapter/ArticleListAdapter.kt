@@ -11,16 +11,16 @@ import hr.fer.objobl.shopking.utils.DiffCallback
 import hr.fer.objobl.shopking.utils.load
 import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
 
-class ArticleListAdapter : ListAdapter<ArticleViewState, ArticleListAdapter.ItemViewHolder>(DiffCallback()) {
+class ArticleListAdapter : ListAdapter<ArticleViewState, ArticleListAdapter.ArticleViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ItemViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.article_list_item, parent, false))
+        ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.article_list_item, parent, false))
 
-    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 
-    class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding: ArticleListItemBinding = ArticleListItemBinding.bind(itemView)
 
         fun bind(article: ArticleViewState) = with(itemView) {

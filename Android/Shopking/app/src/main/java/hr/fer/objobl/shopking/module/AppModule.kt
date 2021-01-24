@@ -2,6 +2,7 @@ package hr.fer.objobl.shopking.module
 
 import androidx.appcompat.app.AppCompatActivity
 import hr.fer.objobl.shopking.data.source.ArticleDataSource
+import hr.fer.objobl.shopking.data.source.CategoryDataSource
 import hr.fer.objobl.shopking.navigation.NavigationManager
 import hr.fer.objobl.shopking.navigation.NavigationManagerImpl
 import hr.fer.objobl.shopking.viewmodel.CatalogueViewModel
@@ -20,12 +21,16 @@ val applicationModule = module {
         ArticleDataSource()
     }
 
+    single {
+        CategoryDataSource()
+    }
+
     viewModel {
         val navigationManager: NavigationManager = it[0]
         MainActivityViewModel(navigationManager)
     }
 
     viewModel {
-        CatalogueViewModel(get())
+        CatalogueViewModel(get(), get())
     }
 }

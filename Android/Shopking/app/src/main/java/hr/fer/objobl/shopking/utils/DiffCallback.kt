@@ -2,15 +2,16 @@ package hr.fer.objobl.shopking.utils
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil
-import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
 
-class DiffCallback : DiffUtil.ItemCallback<ArticleViewState>() {
-    override fun areItemsTheSame(oldItem: ArticleViewState, newItem: ArticleViewState): Boolean {
-        return oldItem == newItem
+abstract class DiffCallbackViewState(open val id: Any? = null)
+
+class DiffCallback<T: DiffCallbackViewState> : DiffUtil.ItemCallback<T>() {
+    override fun areItemsTheSame(oldItem: T, newItem: T): Boolean {
+        return oldItem.id == newItem.id
     }
 
     @SuppressLint("DiffUtilEquals")
-    override fun areContentsTheSame(oldItem: ArticleViewState, newItem: ArticleViewState): Boolean {
+    override fun areContentsTheSame(oldItem: T, newItem: T): Boolean {
         return oldItem == newItem
     }
 }

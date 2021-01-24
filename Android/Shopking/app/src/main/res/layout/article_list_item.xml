@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/article_list_item_height"
+    android:clipToPadding="true"
     app:cardElevation="@dimen/article_list_item_elevation"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="@dimen/article_list_item_corner_radius">

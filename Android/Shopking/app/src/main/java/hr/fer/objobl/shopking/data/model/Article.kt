@@ -1,6 +1,7 @@
 package hr.fer.objobl.shopking.data.model
 
-class Article(
+data class Article(
+    val id: Long,
     val name: String,
     val description: String,
     val price: String,

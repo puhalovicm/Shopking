@@ -8,6 +8,7 @@ class ArticleDataSource {
     val articles: MutableLiveData<List<Article>> = MutableLiveData(
         listOf(
             Article(
+                1,
                 "Apples",
                 "K Plus",
                 "100 kn",
@@ -15,6 +16,7 @@ class ArticleDataSource {
                 true
             ),
             Article(
+                2,
                 "Pears",
                 "Lidl",
                 "100 kn",
@@ -22,6 +24,7 @@ class ArticleDataSource {
                 true
             ),
             Article(
+                3,
                 "Blender",
                 "Sanja",
                 "300 kn",
@@ -29,6 +32,7 @@ class ArticleDataSource {
                 true
             ),
             Article(
+                4,
                 "Banana",
                 "Banana",
                 "100 kn",

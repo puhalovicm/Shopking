@@ -19,5 +19,11 @@
     <dimen name="article_list_item_sale_icon_padding_vertical">10dp</dimen>
     <dimen name="article_list_item_sale_icon_padding_horizontal">20dp</dimen>
 
+    <dimen name="article_grid_margin_top">20dp</dimen>
     <dimen name="article_grid_item_offset">10dp</dimen>
+    <dimen name="category_item_text_size">18sp</dimen>
+    <dimen name="category_item_padding_vertical">10dp</dimen>
+    <dimen name="category_item_padding_horizontal">20dp</dimen>
+    <dimen name="category_item_offset">20dp</dimen>
+    <dimen name="category_item_corner_radius">60dp</dimen>
 </resources>
