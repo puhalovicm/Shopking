@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import hr.fer.objobl.shopking.R
 import hr.fer.objobl.shopking.databinding.ActivityMainBinding
-import hr.fer.objobl.shopking.model.ScreenType
+import hr.fer.objobl.shopking.data.model.ScreenType
 import hr.fer.objobl.shopking.navigation.NavigationManager
 import hr.fer.objobl.shopking.viewmodel.MainActivityViewModel
 import org.koin.android.ext.android.inject
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun registerBottomNavigationObserver() {
-        val nameObserver = Observer<ScreenType> { type ->
+        val screenTypeObserver = Observer<ScreenType> { type ->
             if (binding.bottomNavigation.selectedItemId != getScreenTypeId(type)) {
                 binding.bottomNavigation.selectedItemId = getScreenTypeId(type)
             }
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
             model.showScreen(type)
         }
 
-        model.screenType.observe(this, nameObserver)
+        model.screenType.observe(this, screenTypeObserver)
     }
 
     private fun getScreenTypeId(type: ScreenType) = when (type) {

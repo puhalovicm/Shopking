@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import hr.fer.objobl.shopking.R
 import hr.fer.objobl.shopking.databinding.ArticleListItemBinding
-import hr.fer.objobl.shopking.view.adapter.util.DiffCallback
+import hr.fer.objobl.shopking.utils.DiffCallback
+import hr.fer.objobl.shopking.utils.load
+import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
 
 class ArticleListAdapter : ListAdapter<ArticleViewState, ArticleListAdapter.ItemViewHolder>(DiffCallback()) {
 
@@ -26,7 +28,7 @@ class ArticleListAdapter : ListAdapter<ArticleViewState, ArticleListAdapter.Item
                 articleListItemName.text = article.name
                 articleListItemDescription.text = article.description
                 articleListItemPrice.text = article.price
-                articleListItemImage.setImageResource(article.image)
+                articleListItemImage.load(article.imageUrl)
                 articleListItemSaleIcon.visibility = if (article.isOnSale) View.VISIBLE else View.GONE
                 articleListItemShoppingList.isChecked = article.isOnShoppingList
                 articleListItemWishList.isChecked = article.isOnWishList

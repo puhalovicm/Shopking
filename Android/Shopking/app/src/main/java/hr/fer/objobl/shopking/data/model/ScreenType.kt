@@ -1,4 +1,4 @@
-package hr.fer.objobl.shopking.model
+package hr.fer.objobl.shopking.data.model
 
 enum class ScreenType {
     CATALOGUE,

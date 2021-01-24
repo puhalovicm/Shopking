@@ -3,14 +3,17 @@ package hr.fer.objobl.shopking.view
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import hr.fer.objobl.shopking.R
 import hr.fer.objobl.shopking.databinding.FragmentCatalogueBinding
 import hr.fer.objobl.shopking.view.adapter.ArticleListAdapter
-import hr.fer.objobl.shopking.view.adapter.ArticleViewState
 import hr.fer.objobl.shopking.view.adapter.decoration.IntermittentItemDecoration
 import hr.fer.objobl.shopking.view.adapter.decoration.ItemOffsetDecoration
-import hr.fer.objobl.shopking.view.adapter.decoration.LastItemDecoration
+import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
+import hr.fer.objobl.shopking.viewmodel.CatalogueViewModel
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
 
 private const val NUM_OF_COLUMNS = 2
 
@@ -19,6 +22,8 @@ class CatalogueFragment : Fragment(R.layout.fragment_catalogue) {
     private lateinit var binding: FragmentCatalogueBinding
 
     private val articleListAdapter: ArticleListAdapter by lazy { ArticleListAdapter() }
+
+    private val model: CatalogueViewModel by inject(parameters = { parametersOf() })
 
     private val itemTopOffsetDecoration: ItemOffsetDecoration by lazy {
         ItemOffsetDecoration(
@@ -45,45 +50,6 @@ class CatalogueFragment : Fragment(R.layout.fragment_catalogue) {
         )
     }
 
-    private val testList = listOf(
-        ArticleViewState(
-            "Apples",
-            "K Plus",
-            "100 kn",
-            R.drawable.app_icon_blue,
-            true,
-            true,
-            true
-        ),
-        ArticleViewState(
-            "Pears",
-            "Lidl",
-            "100 kn",
-            R.drawable.app_icon_blue,
-            true,
-            true,
-            true
-        ),
-        ArticleViewState(
-            "Blender",
-            "Sanja",
-            "300 kn",
-            R.drawable.app_icon_blue,
-            true,
-            true,
-            true
-        ),
-        ArticleViewState(
-            "Banana",
-            "Banana",
-            "100 kn",
-            R.drawable.app_icon_blue,
-            true,
-            true,
-            true
-        )
-    )
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentCatalogueBinding.bind(view)
@@ -101,7 +67,11 @@ class CatalogueFragment : Fragment(R.layout.fragment_catalogue) {
             addItemDecoration(lastItemRightOffsetDecoration)
         }
 
-        articleListAdapter.submitList(testList)
+        val articlesObserver = Observer<List<ArticleViewState>> { articles ->
+            articleListAdapter.submitList(articles)
+        }
+
+        model.articles.observe(viewLifecycleOwner, articlesObserver)
     }
 
     companion object {

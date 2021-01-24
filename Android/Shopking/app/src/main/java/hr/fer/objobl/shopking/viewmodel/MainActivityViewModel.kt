@@ -2,15 +2,14 @@ package hr.fer.objobl.shopking.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import hr.fer.objobl.shopking.common.DistinctUntilChangedMutableLiveData
-import hr.fer.objobl.shopking.model.ScreenType
+import hr.fer.objobl.shopking.data.model.ScreenType
 import hr.fer.objobl.shopking.navigation.NavigationManager
 
 class MainActivityViewModel(
     private val navigationManager: NavigationManager
 ) : ViewModel() {
 
-    val screenType: MutableLiveData<ScreenType> by lazy { DistinctUntilChangedMutableLiveData(ScreenType.CATALOGUE) }
+    val screenType: MutableLiveData<ScreenType> by lazy { MutableLiveData(ScreenType.CATALOGUE) }
 
     fun setScreenType(type: ScreenType) {
         screenType.value = type
