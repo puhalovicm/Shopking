@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Shopking.Dao;
 
 namespace Shopking
 {
@@ -23,6 +24,10 @@ namespace Shopking
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Shopking", Version = "v1" });
             });
+
+            services.AddSingleton<RecipeRepository>();
+            services.AddSingleton<ShopRepository>();
+
             services.AddControllers();
         }
 
