@@ -18,9 +18,15 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Mappings\" />
+    <Folder Include="Models\Dto\" />
+    <Folder Include="Models\Mapper\" />
+    <Folder Include="Dao\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Models\Shop.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Models\Shop %28copy%29.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NHibernate;
+using Shopking.Dao;
 using Shopking.Models;
 using System;
 using System.Collections.Generic;
@@ -10,17 +11,17 @@ namespace Shopking.Controllers
     [Route("api/shops")]
     public class ShopController : ControllerBase
     {
-        public ShopController()
+        private readonly ShopRepository shopRepository;
+
+        public ShopController(ShopRepository shopRepository)
         {
+            this.shopRepository = shopRepository;
         }
 
         [HttpGet]
         public IEnumerable<Shop> Get()
         {
-            using (ISession session = NHibernateSession.OpenSession()) 
-            {
-                return session.Query<Shop>().ToList();
-            }
+            return shopRepository.GetShops();
         }
     }
 }
