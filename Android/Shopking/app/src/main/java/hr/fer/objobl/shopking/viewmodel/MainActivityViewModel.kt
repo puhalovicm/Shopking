@@ -2,37 +2,44 @@ package hr.fer.objobl.shopking.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import hr.fer.objobl.shopking.model.ScreenType
+import hr.fer.objobl.shopking.data.model.ScreenType
 import hr.fer.objobl.shopking.navigation.NavigationManager
 
 class MainActivityViewModel(
     private val navigationManager: NavigationManager
 ) : ViewModel() {
 
-    val screenType: MutableLiveData<ScreenType> by lazy { MutableLiveData(ScreenType.CATALOGOUE) }
+    val screenType: MutableLiveData<ScreenType> by lazy { MutableLiveData(ScreenType.CATALOGUE) }
 
-    fun showCatalogoueScreen() {
-        screenType.value = ScreenType.CATALOGOUE
-        navigationManager.showCatalogoueScreen()
+    fun setScreenType(type: ScreenType) {
+        screenType.value = type
     }
 
-    fun showShoppingListScreen() {
-        screenType.value = ScreenType.SHOPPING_LIST
+    fun showScreen(type: ScreenType) = when (type) {
+        ScreenType.CATALOGUE -> showCatalogueScreen()
+        ScreenType.SHOPPING_LIST -> showShoppingListScreen()
+        ScreenType.WISH_LIST -> showWishListScreen()
+        ScreenType.RECIPES -> showRecipesScreen()
+        ScreenType.INFORMATION -> showInformationScreen()
+    }
+
+    private fun showCatalogueScreen() {
+        navigationManager.showCatalogueScreen()
+    }
+
+    private fun showShoppingListScreen() {
         navigationManager.showShoppingListScreen()
     }
 
-    fun showWishListScreen() {
-        screenType.value = ScreenType.WISH_LIST
+    private fun showWishListScreen() {
         navigationManager.showWishListScreen()
     }
 
-    fun showRecipesScreen() {
-        screenType.value = ScreenType.RECIPES
+    private fun showRecipesScreen() {
         navigationManager.showRecipesScreen()
     }
 
-    fun showInformationScreen() {
-        screenType.value = ScreenType.INFORMATION
+    private fun showInformationScreen() {
         navigationManager.showInformationScreen()
     }
 }

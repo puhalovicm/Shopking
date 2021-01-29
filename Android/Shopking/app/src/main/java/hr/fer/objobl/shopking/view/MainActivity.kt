@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import hr.fer.objobl.shopking.R
 import hr.fer.objobl.shopking.databinding.ActivityMainBinding
-import hr.fer.objobl.shopking.model.ScreenType
+import hr.fer.objobl.shopking.data.model.ScreenType
 import hr.fer.objobl.shopking.navigation.NavigationManager
 import hr.fer.objobl.shopking.viewmodel.MainActivityViewModel
 import org.koin.android.ext.android.inject
@@ -35,24 +35,24 @@ class MainActivity : AppCompatActivity() {
     private fun setupOnNavigationItemSelectedListener() {
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.bottom_navigation_catalogoue_item -> {
-                    model.showCatalogoueScreen()
+                R.id.bottom_navigation_catalogue_item -> {
+                    model.setScreenType(ScreenType.CATALOGUE)
                     true
                 }
                 R.id.bottom_navigation_shopping_list_item -> {
-                    model.showShoppingListScreen()
+                    model.setScreenType(ScreenType.SHOPPING_LIST)
                     true
                 }
                 R.id.bottom_navigation_wish_list_item -> {
-                    model.showWishListScreen()
+                    model.setScreenType(ScreenType.WISH_LIST)
                     true
                 }
                 R.id.bottom_navigation_recipes_item -> {
-                    model.showRecipesScreen()
+                    model.setScreenType(ScreenType.RECIPES)
                     true
                 }
                 R.id.bottom_navigation_information_item -> {
-                    model.showInformationScreen()
+                    model.setScreenType(ScreenType.INFORMATION)
                     true
                 }
                 else -> false
@@ -61,17 +61,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun registerBottomNavigationObserver() {
-        val nameObserver = Observer<ScreenType> { type ->
+        val screenTypeObserver = Observer<ScreenType> { type ->
             if (binding.bottomNavigation.selectedItemId != getScreenTypeId(type)) {
                 binding.bottomNavigation.selectedItemId = getScreenTypeId(type)
             }
+
+            model.showScreen(type)
         }
 
-        model.screenType.observe(this, nameObserver)
+        model.screenType.observe(this, screenTypeObserver)
     }
 
     private fun getScreenTypeId(type: ScreenType) = when (type) {
-        ScreenType.CATALOGOUE -> R.id.bottom_navigation_catalogoue_item
+        ScreenType.CATALOGUE -> R.id.bottom_navigation_catalogue_item
         ScreenType.SHOPPING_LIST -> R.id.bottom_navigation_shopping_list_item
         ScreenType.WISH_LIST -> R.id.bottom_navigation_wish_list_item
         ScreenType.RECIPES -> R.id.bottom_navigation_recipes_item
