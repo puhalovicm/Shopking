@@ -20,6 +20,9 @@
     <dimen name="article_list_item_sale_icon_padding_vertical">10dp</dimen>
     <dimen name="article_list_item_sale_icon_padding_horizontal">20dp</dimen>
 
+    <dimen name="article_details_item_icon_height">160dp</dimen>
+    <dimen name="article_details_item_text_margin_horizontal">20dp</dimen>
+
     <dimen name="article_grid_margin_top">20dp</dimen>
     <dimen name="article_grid_item_offset">10dp</dimen>
     <dimen name="category_item_text_size">18sp</dimen>

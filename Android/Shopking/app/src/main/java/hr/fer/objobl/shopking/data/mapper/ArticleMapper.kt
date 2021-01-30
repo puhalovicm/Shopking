@@ -1,6 +1,7 @@
 package hr.fer.objobl.shopking.data.mapper
 
 import hr.fer.objobl.shopking.data.model.Article
+import hr.fer.objobl.shopking.view.viewstate.ArticleDetailsViewState
 import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
 
 fun List<Article>.mapToViewStateList() = this.map { it.mapToViewState() }
@@ -14,4 +15,12 @@ private fun Article.mapToViewState() = ArticleViewState(
     isOnSale,
     false,
     false
+)
+
+fun Article.mapToDetailsViewState() = ArticleDetailsViewState(
+    name,
+    description,
+    description,
+    price,
+    imageUrl
 )
