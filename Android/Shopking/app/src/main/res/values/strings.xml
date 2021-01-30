@@ -12,6 +12,13 @@
     <string name="recipe_details_ingredients">Ingredients</string>
     <string name="recipe_details_recipe">Recipe</string>
 
+    <string name="information_notifications_title">Notifications</string>
+    <string name="information_notifications_content">Item %s from your Wish List is on Sale!</string>
+    <string name="information_shops_title">Shops</string>
+
     <string name="toolbar_catalogue_title">Catalogue</string>
     <string name="toolbar_recipes_title">Recipes</string>
+    <string name="toolbar_information_title">Information</string>
+    <string name="toolbar_notifications_title">Notifications</string>
+    <string name="toolbar_shops_title">Shops</string>
 </resources>

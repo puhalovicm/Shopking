@@ -66,4 +66,10 @@
         <item name="android:fontFamily">@font/open_sans_semi_bold</item>
     </style>
 
+    <style name="BlueText">
+        <item name="android:textSize">@dimen/see_all_text_size</item>
+        <item name="android:textColor">@color/shopking_medium_blue</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
 </resources>

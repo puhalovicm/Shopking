@@ -20,11 +20,6 @@ class IngredientListAdapter :
         holder.bind(getItem(position))
     }
 
-    override fun submitList(list: List<IngredientViewState>?) {
-
-        super.submitList(list)
-    }
-
     class IngredientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding: IngredientItemBinding = IngredientItemBinding.bind(itemView)
 

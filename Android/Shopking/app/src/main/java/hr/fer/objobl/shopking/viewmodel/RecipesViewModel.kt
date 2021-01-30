@@ -19,9 +19,7 @@ class RecipesViewModel(
     private val navigationManager: NavigationManager
 ) : ViewModel() {
 
-    val recipes: MutableLiveData<List<Recipe>> by lazy { MutableLiveData(recipesDataSource.recipes.value) }
     val recipesViewState: MutableLiveData<List<RecipeViewState>> by lazy { MutableLiveData<List<RecipeViewState>>() }
-
     val recipeDifficulties: MutableLiveData<List<RecipeDifficultyViewState>> by lazy {
         MutableLiveData(
             recipeDifficultiesDataSource.difficulties.value?.mapToRecipeDifficultyViewStateList()
@@ -36,13 +34,13 @@ class RecipesViewModel(
     }
 
     init {
-        recipes.observeForever {
+        recipesDataSource.recipes.observeForever {
             recipesViewState.postValue(it.mapToViewStateList())
         }
     }
 
     fun fetchArticles() {
-        recipes.value = recipes.value!!
+        recipesViewState.value = recipesViewState.value!!
     }
 
     fun selectDifficulty(difficulty: String) {
@@ -50,7 +48,7 @@ class RecipesViewModel(
     }
 
     fun showRecipeDetails(activity: AppCompatActivity, id: Long) {
-        recipes.value?.first { it.id == id }.let {
+        recipesDataSource.recipes.value?.first { it.id == id }.let {
             navigationManager.showRecipeDetails(activity, it!!.mapToDetailsViewState())
         }
     }

@@ -1,11 +1,12 @@
 package hr.fer.objobl.shopking.navigation
 
+import android.content.Intent
+import android.net.Uri
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import hr.fer.objobl.shopking.R
-import hr.fer.objobl.shopking.view.CatalogueFragment
-import hr.fer.objobl.shopking.view.RecipeDetailsFragment
-import hr.fer.objobl.shopking.view.RecipesFragment
+import hr.fer.objobl.shopking.view.*
 import hr.fer.objobl.shopking.view.viewstate.RecipeDetailsViewState
 
 @IdRes
@@ -55,7 +56,52 @@ class NavigationManagerImpl : NavigationManager {
     }
 
     override fun showInformationScreen(activity: AppCompatActivity) {
-        //        TODO("Not yet implemented")
+        val informationFragment = InformationFragment.newInstance()
+        activity.supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out)
+            .replace(MAIN_ACTIVITY_CONTAINER, informationFragment)
+            .commit()
+    }
+
+    override fun showNotificationsScreen(activity: AppCompatActivity) {
+        val notificationsFragment = NotificationsFragment.newInstance()
+        activity.supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(
+                android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right,
+                android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right
+            )
+            .add(MAIN_ACTIVITY_CONTAINER, notificationsFragment)
+            .addToBackStack(RecipeDetailsFragment.TAG)
+            .commit()
+    }
+
+    override fun showShopsScreen(activity: AppCompatActivity) {
+        val shopsFragment = ShopsFragment.newInstance()
+        activity.supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(
+                android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right,
+                android.R.anim.slide_in_left,
+                android.R.anim.slide_out_right
+            )
+            .add(MAIN_ACTIVITY_CONTAINER, shopsFragment)
+            .addToBackStack(RecipeDetailsFragment.TAG)
+            .commit()
+    }
+
+    override fun showShopOnMap(activity: AppCompatActivity, address: String) {
+//        val gmmIntentUri = Uri.parse("geo:0,0?q=1600 Amphitheatre Parkway, Mountain+View, California")
+        val gmmIntentUri = Uri.parse("geo:0,0?q=$address")
+
+//        val gmmIntentUri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
+        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+        mapIntent.setPackage("com.google.android.apps.maps")
+        startActivity(activity, mapIntent, null)
     }
 
     override fun goBack(activity: AppCompatActivity) {

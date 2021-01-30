@@ -17,5 +17,11 @@ interface NavigationManager {
 
     fun showInformationScreen(activity: AppCompatActivity)
 
+    fun showNotificationsScreen(activity: AppCompatActivity)
+
+    fun showShopsScreen(activity: AppCompatActivity)
+
+    fun showShopOnMap(activity: AppCompatActivity, address: String)
+
     fun goBack(activity: AppCompatActivity)
 }

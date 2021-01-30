@@ -15,6 +15,7 @@ class CatalogueViewModel(
 ) : ViewModel() {
 
     val articles: MutableLiveData<List<ArticleViewState>> by lazy { MutableLiveData(articleDataSource.articles.value?.mapToViewStateList()) }
+
     val categories: MutableLiveData<List<CategoryViewState>> by lazy {
         MutableLiveData(
             categoryDataSource.categories.value?.mapToCategoryViewStateList()?.mapIndexed { index, categoryViewState ->
@@ -25,6 +26,12 @@ class CatalogueViewModel(
                 categoryViewState
             }
         )
+    }
+
+    init {
+        articleDataSource.articles.observeForever {
+            articles.postValue(it.mapToViewStateList())
+        }
     }
 
     fun fetchArticles() {
