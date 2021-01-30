@@ -27,6 +27,7 @@ namespace Shopking
 
             services.AddSingleton<RecipeRepository>();
             services.AddSingleton<ShopRepository>();
+            services.AddSingleton<ItemRepository>();
 
             services.AddControllers();
         }
