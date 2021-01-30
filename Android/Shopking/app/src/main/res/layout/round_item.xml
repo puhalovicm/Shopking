@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:id="@+id/category_item_name"
+<TextView android:id="@+id/round_item_name"
     style="@style/CategoryName"
     android:elevation="5dp"
     xmlns:android="http://schemas.android.com/apk/res/android"

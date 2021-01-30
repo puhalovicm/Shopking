@@ -8,37 +8,37 @@ import androidx.recyclerview.widget.RecyclerView
 import hr.fer.objobl.shopking.R
 import hr.fer.objobl.shopking.databinding.RoundItemBinding
 import hr.fer.objobl.shopking.utils.DiffCallback
-import hr.fer.objobl.shopking.view.viewstate.CategoryViewState
+import hr.fer.objobl.shopking.view.viewstate.RecipeDifficultyViewState
 
-typealias OnCategoryClickListener = (String) -> Unit
+typealias OnDifficultyClickListener = (String) -> Unit
 
-class CategoryListAdapter(
-    private val onCategoryClickListener: OnCategoryClickListener
-) : ListAdapter<CategoryViewState, CategoryListAdapter.CategoryViewHolder>(DiffCallback()) {
+class RecipeDifficultyListAdapter(
+    private val onCategoryClickListener: OnDifficultyClickListener
+) : ListAdapter<RecipeDifficultyViewState, RecipeDifficultyListAdapter.DifficultyViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        CategoryViewHolder(
+        DifficultyViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.round_item, parent, false),
             onCategoryClickListener
         )
 
-    override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DifficultyViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 
-    class CategoryViewHolder(
+    class DifficultyViewHolder(
         itemView: View,
-        private val onCategoryClickListener: OnCategoryClickListener
+        private val onCategoryClickListener: OnDifficultyClickListener
     ) : RecyclerView.ViewHolder(itemView) {
         private val binding: RoundItemBinding = RoundItemBinding.bind(itemView)
 
-        fun bind(category: CategoryViewState) = with(itemView) {
+        fun bind(difficulty: RecipeDifficultyViewState) = with(itemView) {
             with(binding) {
-                roundItemName.text = category.name
-                roundItemName.isSelected = category.isSelected
+                roundItemName.text = difficulty.name
+                roundItemName.isSelected = difficulty.isSelected
             }
 
-            setOnClickListener { onCategoryClickListener(category.name) }
+            setOnClickListener { onCategoryClickListener(difficulty.name) }
         }
     }
 }

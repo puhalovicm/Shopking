@@ -1,22 +1,20 @@
 package hr.fer.objobl.shopking.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import hr.fer.objobl.shopking.R
-import hr.fer.objobl.shopking.databinding.ActivityMainBinding
 import hr.fer.objobl.shopking.data.model.ScreenType
-import hr.fer.objobl.shopking.navigation.NavigationManager
+import hr.fer.objobl.shopking.databinding.ActivityMainBinding
 import hr.fer.objobl.shopking.viewmodel.MainActivityViewModel
 import org.koin.android.ext.android.inject
-import org.koin.core.parameter.parametersOf
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val navigationManager: NavigationManager by inject(parameters = { parametersOf(this) })
-    private val model: MainActivityViewModel by inject(parameters = { parametersOf(navigationManager) })
+    private val model: MainActivityViewModel by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                 binding.bottomNavigation.selectedItemId = getScreenTypeId(type)
             }
 
-            model.showScreen(type)
+            model.showScreen(this, type)
         }
 
         model.screenType.observe(this, screenTypeObserver)
@@ -78,5 +76,9 @@ class MainActivity : AppCompatActivity() {
         ScreenType.WISH_LIST -> R.id.bottom_navigation_wish_list_item
         ScreenType.RECIPES -> R.id.bottom_navigation_recipes_item
         ScreenType.INFORMATION -> R.id.bottom_navigation_information_item
+    }
+
+    override fun onBackPressed() {
+        model.goBack(this)
     }
 }

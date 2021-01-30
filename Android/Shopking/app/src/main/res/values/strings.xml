@@ -9,5 +9,9 @@
     <string name="article_list_item_image_description">Article image</string>
     <string name="article_list_sale">%</string>
 
+    <string name="recipe_details_ingredients">Ingredients</string>
+    <string name="recipe_details_recipe">Recipe</string>
+
     <string name="toolbar_catalogue_title">Catalogue</string>
+    <string name="toolbar_recipes_title">Recipes</string>
 </resources>

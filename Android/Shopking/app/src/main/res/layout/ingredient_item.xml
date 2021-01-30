@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <CheckBox
+        android:id="@+id/ingredient_item_shopping_list"
+        style="?android:attr/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/article_list_item_sale_icon_margin_end" />
+
+    <CheckBox
+        android:id="@+id/ingredient_item_wish_list"
+        style="?android:attr/starStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/article_list_item_sale_icon_margin_end" />
+
+    <TextView
+        android:id="@+id/ingredient_item_name"
+        style="@style/IngredientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Apple" />
+
+</LinearLayout>

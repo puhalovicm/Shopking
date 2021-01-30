@@ -28,7 +28,13 @@
     <dimen name="category_item_offset">20dp</dimen>
     <dimen name="category_item_corner_radius">60dp</dimen>
 
+    <dimen name="ingredient_text_size">12sp</dimen>
+    <dimen name="recipe_description_text_size">12sp</dimen>
+
     <dimen name="toolbar_title_text_size">36sp</dimen>
+    <dimen name="toolbar_description_text_size">12sp</dimen>
+    <dimen name="details_title_text_size">18sp</dimen>
     <dimen name="toolbar_title_margin_top">20dp</dimen>
+    <dimen name="toolbar_description_margin_top">16dp</dimen>
     <dimen name="toolbar_title_margin_bottom">30dp</dimen>
 </resources>

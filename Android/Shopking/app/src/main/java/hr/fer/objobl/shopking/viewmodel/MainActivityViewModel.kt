@@ -1,5 +1,6 @@
 package hr.fer.objobl.shopking.viewmodel
 
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import hr.fer.objobl.shopking.data.model.ScreenType
@@ -15,31 +16,35 @@ class MainActivityViewModel(
         screenType.value = type
     }
 
-    fun showScreen(type: ScreenType) = when (type) {
-        ScreenType.CATALOGUE -> showCatalogueScreen()
-        ScreenType.SHOPPING_LIST -> showShoppingListScreen()
-        ScreenType.WISH_LIST -> showWishListScreen()
-        ScreenType.RECIPES -> showRecipesScreen()
-        ScreenType.INFORMATION -> showInformationScreen()
+    fun showScreen(activity: AppCompatActivity, type: ScreenType) = when (type) {
+        ScreenType.CATALOGUE -> showCatalogueScreen(activity)
+        ScreenType.SHOPPING_LIST -> showShoppingListScreen(activity)
+        ScreenType.WISH_LIST -> showWishListScreen(activity)
+        ScreenType.RECIPES -> showRecipesScreen(activity)
+        ScreenType.INFORMATION -> showInformationScreen(activity)
     }
 
-    private fun showCatalogueScreen() {
-        navigationManager.showCatalogueScreen()
+    private fun showCatalogueScreen(activity: AppCompatActivity) {
+        navigationManager.showCatalogueScreen(activity)
     }
 
-    private fun showShoppingListScreen() {
-        navigationManager.showShoppingListScreen()
+    private fun showShoppingListScreen(activity: AppCompatActivity) {
+        navigationManager.showShoppingListScreen(activity)
     }
 
-    private fun showWishListScreen() {
-        navigationManager.showWishListScreen()
+    private fun showWishListScreen(activity: AppCompatActivity) {
+        navigationManager.showWishListScreen(activity)
     }
 
-    private fun showRecipesScreen() {
-        navigationManager.showRecipesScreen()
+    private fun showRecipesScreen(activity: AppCompatActivity) {
+        navigationManager.showRecipesScreen(activity)
     }
 
-    private fun showInformationScreen() {
-        navigationManager.showInformationScreen()
+    private fun showInformationScreen(activity: AppCompatActivity) {
+        navigationManager.showInformationScreen(activity)
+    }
+
+    fun goBack(activity: AppCompatActivity) {
+        navigationManager.goBack(activity)
     }
 }

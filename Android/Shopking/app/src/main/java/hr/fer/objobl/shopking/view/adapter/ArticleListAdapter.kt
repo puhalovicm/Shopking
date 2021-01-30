@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import hr.fer.objobl.shopking.R
-import hr.fer.objobl.shopking.databinding.ArticleListItemBinding
+import hr.fer.objobl.shopking.databinding.CardItemBinding
 import hr.fer.objobl.shopking.utils.DiffCallback
 import hr.fer.objobl.shopking.utils.load
 import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
@@ -14,14 +14,14 @@ import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
 class ArticleListAdapter : ListAdapter<ArticleViewState, ArticleListAdapter.ArticleViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.article_list_item, parent, false))
+        ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false))
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 
     class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val binding: ArticleListItemBinding = ArticleListItemBinding.bind(itemView)
+        private val binding: CardItemBinding = CardItemBinding.bind(itemView)
 
         fun bind(article: ArticleViewState) = with(itemView) {
             with(binding) {

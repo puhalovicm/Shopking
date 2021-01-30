@@ -1,12 +1,10 @@
 package hr.fer.objobl.shopking.data.mapper
 
-import hr.fer.objobl.shopking.data.model.Category
 import hr.fer.objobl.shopking.view.viewstate.CategoryViewState
 
-fun List<Category>.mapToViewStateList() = this.map { it.mapToViewState() }
+fun List<String>.mapToCategoryViewStateList() = this.map { it.mapToCategoryViewState() }
 
-private fun Category.mapToViewState() = CategoryViewState(
-    id,
-    name,
+private fun String.mapToCategoryViewState() = CategoryViewState(
+    this,
     false
 )
