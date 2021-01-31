@@ -43,12 +43,6 @@ namespace Shopking.Controllers
             }
         }
 
-        [HttpGet("ingredients")]
-        public IEnumerable<IngredientDto> GetIngredients()
-        {
-            return recipeRepository.GetIngredients().Select(i => IngredientMapper.map(i));
-        }
-
         [HttpGet("difficulties")]
         public IList<String> GetDifficulties()
         {

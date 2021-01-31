@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "hr.fer.objobl.shopking"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -48,6 +48,10 @@ dependencies {
     def material_version = "1.2.1"
     def room_version = "2.2.6"
 
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

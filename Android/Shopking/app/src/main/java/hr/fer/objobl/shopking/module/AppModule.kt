@@ -1,14 +1,18 @@
 package hr.fer.objobl.shopking.module
 
 import androidx.room.Room
-import hr.fer.objobl.shopking.data.model.dao.ShopkingDatabase
+import hr.fer.objobl.shopking.data.api.ApiClient
+import hr.fer.objobl.shopking.data.db.ShopkingDatabase
+import hr.fer.objobl.shopking.data.model.api.ItemsService
+import hr.fer.objobl.shopking.data.model.api.NotificationService
+import hr.fer.objobl.shopking.data.model.api.RecipeService
+import hr.fer.objobl.shopking.data.model.api.ShopService
 import hr.fer.objobl.shopking.data.source.*
 import hr.fer.objobl.shopking.navigation.NavigationManager
 import hr.fer.objobl.shopking.navigation.NavigationManagerImpl
 import hr.fer.objobl.shopking.utils.ShopkingStrings
 import hr.fer.objobl.shopking.utils.ShopkingStringsImpl
 import hr.fer.objobl.shopking.viewmodel.*
-import org.koin.android.ext.koin.androidApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -19,7 +23,23 @@ val applicationModule = module {
         Room.databaseBuilder(
             get(),
             ShopkingDatabase::class.java, "shopking_db"
-        ).build()
+        ).allowMainThreadQueries().build()
+    }
+
+    single<RecipeService> {
+        ApiClient.retrofit.create(RecipeService::class.java)
+    }
+
+    single<ShopService> {
+        ApiClient.retrofit.create(ShopService::class.java)
+    }
+
+    single<ItemsService> {
+        ApiClient.retrofit.create(ItemsService::class.java)
+    }
+
+    single<NotificationService> {
+        ApiClient.retrofit.create(NotificationService::class.java)
     }
 
     single<NavigationManager> {
@@ -27,23 +47,23 @@ val applicationModule = module {
     }
 
     single {
-        ArticleDataSource()
+        ArticleDataSource(get())
     }
 
     single {
-        CategoryDataSource()
+        CategoryDataSource(get())
     }
 
     single {
-        RecipesDataSource()
+        RecipesDataSource(get())
     }
 
     single {
-        NotificationDataSource()
+        NotificationDataSource(get())
     }
 
     single {
-        ShopDataSource()
+        ShopDataSource(get())
     }
 
     single {
@@ -67,7 +87,7 @@ val applicationModule = module {
     }
 
     viewModel {
-        CatalogueViewModel(get(), get(), get())
+        CatalogueViewModel(get(), get(), get(), get(), get())
     }
 
     viewModel {
@@ -79,7 +99,7 @@ val applicationModule = module {
     }
 
     viewModel {
-        NotificationsViewModel(get(), get(), get())
+        NotificationsViewModel(get(), get(), get(), get())
     }
 
     viewModel {
@@ -95,6 +115,6 @@ val applicationModule = module {
     }
 
     viewModel {
-        InformationViewModel(get(), get(), get(), get(), get())
+        InformationViewModel(get(), get(), get(), get(), get(), get())
     }
 }

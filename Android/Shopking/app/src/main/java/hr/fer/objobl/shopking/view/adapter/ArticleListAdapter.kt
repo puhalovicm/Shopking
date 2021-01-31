@@ -14,11 +14,13 @@ import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
 typealias OnArticleClickListener = (Long) -> Unit
 
 class ArticleListAdapter(
-    private val onArticleClickListener: OnArticleClickListener
+    private val onArticleClickListener: OnArticleClickListener,
+    private val onShoppingListClickListener: OnArticleClickListener,
+    private val onWishListClickListener: OnArticleClickListener
 ) : ListAdapter<ArticleViewState, ArticleListAdapter.ArticleViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false), onArticleClickListener)
+        ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false), onArticleClickListener, onShoppingListClickListener, onWishListClickListener)
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         holder.bind(getItem(position))
@@ -26,7 +28,9 @@ class ArticleListAdapter(
 
     class ArticleViewHolder(
         itemView: View,
-        private val onArticleClickListener: OnArticleClickListener
+        private val onArticleClickListener: OnArticleClickListener,
+        private val onShoppingListClickListener: OnArticleClickListener,
+        private val onWishListClickListener: OnArticleClickListener
     ) : RecyclerView.ViewHolder(itemView) {
         private val binding: CardItemBinding = CardItemBinding.bind(itemView)
 
@@ -36,9 +40,17 @@ class ArticleListAdapter(
                 articleListItemDescription.text = article.description
                 articleListItemPrice.text = article.price
                 articleListItemImage.load(article.imageUrl)
-                articleListItemSaleIcon.visibility = if (article.isOnSale) View.VISIBLE else View.GONE
+                articleListItemSaleIcon.visibility = if (article.isOnSale) View.VISIBLE else View.INVISIBLE
                 articleListItemShoppingList.isChecked = article.isOnShoppingList
                 articleListItemWishList.isChecked = article.isOnWishList
+
+                articleListItemShoppingList.setOnClickListener {
+                    onShoppingListClickListener(article.id)
+                }
+
+                articleListItemWishList.setOnClickListener {
+                    onWishListClickListener(article.id)
+                }
             }
 
             setOnClickListener {

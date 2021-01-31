@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import hr.fer.objobl.shopking.data.mapper.mapToDetailsViewState
 import hr.fer.objobl.shopking.data.mapper.mapToRecipeDifficultyViewStateList
 import hr.fer.objobl.shopking.data.mapper.mapToViewStateList
-import hr.fer.objobl.shopking.data.model.Recipe
 import hr.fer.objobl.shopking.data.source.RecipeDifficultiesDataSource
 import hr.fer.objobl.shopking.data.source.RecipesDataSource
 import hr.fer.objobl.shopking.navigation.NavigationManager
@@ -37,14 +36,17 @@ class RecipesViewModel(
         recipesDataSource.recipes.observeForever {
             recipesViewState.postValue(it.mapToViewStateList())
         }
+
+        fetchArticles()
     }
 
     fun fetchArticles() {
-        recipesViewState.value = recipesViewState.value!!
+        recipesDataSource.fetchRecipes()
     }
 
     fun selectDifficulty(difficulty: String) {
         recipeDifficulties.value = recipeDifficulties.value?.map { RecipeDifficultyViewState(it.name, it.name == difficulty) }
+        recipesDataSource.fetchRecipesByDifficulty(difficulty)
     }
 
     fun showRecipeDetails(activity: AppCompatActivity, id: Long) {

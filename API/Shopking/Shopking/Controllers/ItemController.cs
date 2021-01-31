@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Shopking.Dao;
 using Shopking.Models;
+using Shopking.Models.Dto;
 using Shopking.Models.Mapper;
 
 namespace Shopking.Controllers
@@ -37,7 +38,7 @@ namespace Shopking.Controllers
         }
 
         [HttpGet("food")]
-        public IEnumerable<Item> GetFoods()
+        public IEnumerable<FoodDto> GetFoods()
         {
             return itemRepository.GetFoodItems();
         }
@@ -129,6 +130,19 @@ namespace Shopking.Controllers
             {
                 return BadRequest();
             }
+        }
+
+        [HttpGet("categories")]
+        public List<string> GetCategories()
+        {
+            List<string> categories = new List<string>();
+            categories.Add("food");
+            categories.Add("beverage");
+            categories.Add("devices");
+            categories.Add("toiletries");
+            categories.Add("categories");
+
+            return categories;
         }
     }
 }
