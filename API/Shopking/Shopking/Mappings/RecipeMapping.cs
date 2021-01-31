@@ -20,6 +20,7 @@ namespace Shopking.Mappings
                 .Not.LazyLoad()
                 .Fetch.Join();
 
+
             Table("Recipe");
         }
     }
