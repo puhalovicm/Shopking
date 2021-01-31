@@ -1,7 +1,7 @@
 ﻿using System;
-namespace Shopking.Models
+namespace Shopking.Models.Dto
 {
-    public class Item
+    public class ItemDto
     {
         public virtual long Id { get; set; }
         public virtual string Name { get; set; }
@@ -9,8 +9,13 @@ namespace Shopking.Models
         public virtual string Price { get; set; }
         public virtual bool Sale { get; set; }
 
-        public Item()
+        public ItemDto(long id, string name, string company, string price, bool sale)
         {
+            Id = id;
+            Name = name;
+            Company = company;
+            Price = price;
+            Sale = sale;
         }
     }
 }

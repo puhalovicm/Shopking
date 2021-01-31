@@ -15,5 +15,93 @@ namespace Shopking.Dao
                 return session.Query<Item>().ToList();
             }
         }
+
+        public Item GetItemById(long id)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Item>().Where(r => r.Id == id).First();
+            }
+        }
+
+        public IEnumerable<Item> GetFoodItems()
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Food>().ToList();
+            }
+        }
+
+        public Food GetFoodById(long id)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Food>().Where(r => r.Id == id).First();
+            }
+        }
+
+        public IEnumerable<Item> GetBeverageItems()
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Beverage>().ToList();
+            }
+        }
+
+        public Beverage GetBeverageById(long id)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Beverage>().Where(r => r.Id == id).First();
+            }
+        }
+
+        public IEnumerable<Item> GetClothingItems()
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Clothing>().ToList();
+            }
+        }
+
+        public Clothing GetClothingById(long id)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Clothing>().Where(r => r.Id == id).First();
+            }
+        }
+
+        public IEnumerable<Item> GetDeviceItems()
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Device>().ToList();
+            }
+        }
+
+        public Device GetDeviceById(long id)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Device>().Where(r => r.Id == id).First();
+            }
+        }
+
+        public IEnumerable<Item> GetToiletryItems()
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Toiletry>().ToList();
+            }
+        }
+
+        public Toiletry GetToiletryById(long id)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Toiletry>().Where(r => r.Id == id).First();
+            }
+        }
     }
 }

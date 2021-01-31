@@ -4,19 +4,18 @@ using Shopking.Models;
 
 namespace Shopking.Mappings
 {
-    public class ItemMapping : ClassMap<Item>
+    public class ToiletryMapping : ClassMap<Toiletry>
     {
-        public ItemMapping()
+        public ToiletryMapping()
         {
-            Table("items");
-            ReadOnly();
+            Table("toiletry");
 
-            Id(x => x.Id).Column("item_id").GeneratedBy.Assigned();
+            Id(x => x.Id).GeneratedBy.Native();
             Map(x => x.Name, "name");
             Map(x => x.Company, "company");
             Map(x => x.Price, "price");
             Map(x => x.Sale, "sale");
-
+            Map(x => x.Mass, "mass");
         }
     }
 }
