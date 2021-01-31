@@ -16,7 +16,7 @@ namespace Shopking.Mappings
 
             HasManyToMany(x => x.Ingredients)
                 .Cascade.All()
-                .Table("recipe_ingredient")
+                .Table("recipe_food")
                 .Not.LazyLoad()
                 .Fetch.Join();
 

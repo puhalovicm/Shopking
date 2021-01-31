@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using NHibernate;
 using Shopking.Models;
+using Shopking.Models.Dto;
+using Shopking.Models.Mapper;
 
 namespace Shopking.Dao
 {
@@ -24,11 +26,29 @@ namespace Shopking.Dao
             }
         }
 
-        public IEnumerable<Item> GetFoodItems()
+        public IEnumerable<Item> GetItemsByIds(List<long> ids)
         {
             using (ISession session = NHibernateSession.OpenSession())
             {
-                return session.Query<Food>().ToList();
+                return session.Query<Item>().Where(r => ids.Contains(r.Id)).ToList();
+            }
+        }
+
+        public IEnumerable<Item> GetSaleItemsByIds(List<long> ids)
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Item>()
+                    .Where(r => ids.Contains(r.Id) && r.Sale)
+                    .ToList();
+            }
+        }
+
+        public IEnumerable<FoodDto> GetFoodItems()
+        {
+            using (ISession session = NHibernateSession.OpenSession())
+            {
+                return session.Query<Food>().ToList().Select(f => FoodMapper.map(f)).ToList();
             }
         }
 

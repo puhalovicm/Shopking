@@ -12,8 +12,8 @@ namespace Shopking.Models.Mapper
             return new RecipeDto(
                 recipe.Id,
                 recipe.Name,
-                recipe.Difficulty,
-                recipe.Ingredients.Select(i => i.Name).ToList(),
+                recipe.Difficulty.ToString(),
+                recipe.Ingredients.Select(i => FoodMapper.map(i)).ToList(),
                 recipe.EstimatedTime,
                 recipe.Description
             );

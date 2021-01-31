@@ -1,32 +1,43 @@
 package hr.fer.objobl.shopking.data.source
 
 import androidx.lifecycle.MutableLiveData
+import hr.fer.objobl.shopking.data.mapper.mapToRecipeList
 import hr.fer.objobl.shopking.data.model.Recipe
+import hr.fer.objobl.shopking.data.model.api.ApiRecipe
+import hr.fer.objobl.shopking.data.model.api.RecipeService
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class RecipesDataSource {
+class RecipesDataSource(
+    private val recipeService: RecipeService
+) {
 
-    val recipes: MutableLiveData<List<Recipe>> = MutableLiveData(
-        listOf(
-            Recipe(
-                1,
-                "Apple pie",
-                "In a small bowl, combine the sugars, flour and spices; set aside. In a large bowl, toss apples with lemon juice. Add sugar mixture….",
-                "https://post.healthline.com/wp-content/uploads/2020/09/Do_Apples_Affect_Diabetes_and_Blood_Sugar_Levels-732x549-thumbnail-1-732x549.jpg",
-                listOf("Apple", "Honey", "Sugar"),
-                20,
-                "125 kn",
-                "EASY"
-            ),
-            Recipe(
-                2,
-                "Salmon",
-                "Bake salmon",
-                "https://post.healthline.com/wp-content/uploads/2020/09/Do_Apples_Affect_Diabetes_and_Blood_Sugar_Levels-732x549-thumbnail-1-732x549.jpg",
-                listOf("Salmon", "Salt", "Wine"),
-                20,
-                "68 kn",
-                "MEDIUM"
-            )
-        )
-    )
+    val recipes = MutableLiveData<List<Recipe>>()
+
+    fun fetchRecipes() {
+        recipeService.getRecipes().enqueue(object : Callback<List<ApiRecipe>> {
+
+            override fun onResponse(call: Call<List<ApiRecipe>>, response: Response<List<ApiRecipe>>) {
+                if (response.isSuccessful) {
+                    recipes.postValue(response.body()?.mapToRecipeList())
+                }
+            }
+
+            override fun onFailure(call: Call<List<ApiRecipe>>, t: Throwable) {}
+        })
+    }
+
+    fun fetchRecipesByDifficulty(difficulty: String) {
+        recipeService.getRecipesByDifficulty(difficulty).enqueue(object : Callback<List<ApiRecipe>> {
+
+            override fun onResponse(call: Call<List<ApiRecipe>>, response: Response<List<ApiRecipe>>) {
+                if (response.isSuccessful) {
+                    recipes.postValue(response.body()?.mapToRecipeList())
+                }
+            }
+
+            override fun onFailure(call: Call<List<ApiRecipe>>, t: Throwable) {}
+        })
+    }
 }

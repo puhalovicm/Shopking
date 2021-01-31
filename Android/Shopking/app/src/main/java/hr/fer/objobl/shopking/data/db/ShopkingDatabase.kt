@@ -1,4 +1,4 @@
-package hr.fer.objobl.shopking.data.model.dao
+package hr.fer.objobl.shopking.data.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

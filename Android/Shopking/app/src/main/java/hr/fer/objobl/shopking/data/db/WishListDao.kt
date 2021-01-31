@@ -1,4 +1,4 @@
-package hr.fer.objobl.shopking.data.model.dao
+package hr.fer.objobl.shopking.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

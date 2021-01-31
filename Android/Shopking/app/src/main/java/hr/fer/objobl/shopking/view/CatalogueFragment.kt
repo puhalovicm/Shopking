@@ -1,7 +1,6 @@
 package hr.fer.objobl.shopking.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -26,7 +25,14 @@ class CatalogueFragment : Fragment(R.layout.fragment_catalogue) {
 
     private lateinit var binding: FragmentCatalogueBinding
 
-    private val articleListAdapter: ArticleListAdapter by lazy { ArticleListAdapter { model.showArticleDetails(activity as AppCompatActivity, it) } }
+    private val articleListAdapter: ArticleListAdapter by lazy {
+        ArticleListAdapter(
+            onArticleClickListener = { model.showArticleDetails(activity as AppCompatActivity, it) },
+            onShoppingListClickListener = { model.addToShoppingList(it) },
+            onWishListClickListener = { model.addToWishList(it) }
+        )
+    }
+
     private val categoryListAdapter: CategoryListAdapter by lazy { CategoryListAdapter(model::selectCategory) }
 
     private val model: CatalogueViewModel by inject(parameters = { parametersOf() })
@@ -71,7 +77,6 @@ class CatalogueFragment : Fragment(R.layout.fragment_catalogue) {
             )
         )
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

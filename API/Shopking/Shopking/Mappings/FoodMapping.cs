@@ -16,6 +16,13 @@ namespace Shopking.Mappings
             Map(x => x.Price, "price");
             Map(x => x.Sale, "sale");
             Map(x => x.Mass, "mass");
+
+            HasManyToMany(x => x.Recipes)
+                            .Cascade.All()
+                            .Inverse()
+                            .Table("recipe_food")
+                            .Not.LazyLoad()
+                            .Fetch.Join();
         }
     }
 }

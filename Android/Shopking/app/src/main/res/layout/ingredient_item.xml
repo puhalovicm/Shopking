@@ -20,6 +20,7 @@
         style="?android:attr/starStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:buttonTint="@color/checkbox_color"
         android:layout_marginEnd="@dimen/article_list_item_sale_icon_margin_end" />
 
     <TextView
