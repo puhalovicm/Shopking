@@ -8,7 +8,7 @@ using Shopking.Models.Mapper;
 
 namespace Shopking.Dao
 {
-    public class ItemRepository
+    public class ItemRepository : IItemRepository
     {
         public IEnumerable<Item> GetItems()
         {
@@ -44,11 +44,11 @@ namespace Shopking.Dao
             }
         }
 
-        public IEnumerable<FoodDto> GetFoodItems()
+        public IEnumerable<Item> GetFoodItems()
         {
             using (ISession session = NHibernateSession.OpenSession())
             {
-                return session.Query<Food>().ToList().Select(f => FoodMapper.map(f)).ToList();
+                return session.Query<Food>().ToList();
             }
         }
 

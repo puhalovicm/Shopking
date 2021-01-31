@@ -7,7 +7,7 @@ using Shopking.Models.Mapper;
 
 namespace Shopking.Dao
 {
-    public class ShopRepository
+    public class ShopRepository : IShopRepository
     {
 
         public IEnumerable<Shop> GetShops()
