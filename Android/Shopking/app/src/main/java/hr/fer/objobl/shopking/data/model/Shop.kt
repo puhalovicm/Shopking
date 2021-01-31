@@ -1,6 +1,6 @@
 package hr.fer.objobl.shopking.data.model
 
-data class Category(
+data class Shop(
     val id: Long,
-    val name: String
+    val address: String
 )

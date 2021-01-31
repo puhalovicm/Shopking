@@ -42,4 +42,34 @@
         <item name="android:fontFamily">@font/open_sans_semi_bold</item>
     </style>
 
+    <style name="ToolbarDescription">
+        <item name="android:textSize">@dimen/toolbar_description_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
+    <style name="DetailsTitle">
+        <item name="android:textSize">@dimen/details_title_text_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="IngredientName">
+        <item name="android:textSize">@dimen/ingredient_text_size</item>
+        <item name="android:textColor">@color/medium_black</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
+    <style name="RecipeDescription">
+        <item name="android:textSize">@dimen/recipe_description_text_size</item>
+        <item name="android:textColor">@color/medium_black</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
+    <style name="BlueText">
+        <item name="android:textSize">@dimen/see_all_text_size</item>
+        <item name="android:textColor">@color/shopking_medium_blue</item>
+        <item name="android:fontFamily">@font/open_sans_semi_bold</item>
+    </style>
+
 </resources>

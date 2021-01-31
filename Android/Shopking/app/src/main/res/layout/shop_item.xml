@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/shop_item_name"
+        style="@style/IngredientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Apple" />
+
+    <TextView
+        android:id="@+id/shop_item_show_on_map"
+        style="@style/BlueText"
+        android:layout_gravity="center_horizontal|end"
+        android:gravity="end"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show on Map"
+        android:focusable="true" />
+
+</LinearLayout>

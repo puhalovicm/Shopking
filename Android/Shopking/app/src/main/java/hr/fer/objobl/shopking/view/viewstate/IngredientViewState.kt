@@ -2,7 +2,8 @@ package hr.fer.objobl.shopking.view.viewstate
 
 import hr.fer.objobl.shopking.utils.DiffCallbackViewState
 
-data class CategoryViewState(
+data class IngredientViewState(
     val name: String,
-    var isSelected: Boolean
+    var isOnShoppingList: Boolean,
+    var isOnWishList: Boolean
 ) : DiffCallbackViewState(name)

@@ -5,9 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/article_list_item_height"
     android:clipToPadding="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
     app:cardElevation="@dimen/article_list_item_elevation"
     app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="@dimen/article_list_item_corner_radius">
+    app:cardCornerRadius="@dimen/article_list_item_corner_radius"
+    android:focusable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -83,7 +86,7 @@
 
         <CheckBox
             android:id="@+id/article_list_item_shopping_list"
-            style="?android:attr/starStyle"
+            style="?android:attr/textViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
