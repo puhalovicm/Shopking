@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="true"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/article_list_item_corner_radius"
+    app:cardElevation="@dimen/article_list_item_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/shopping_list_item_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginVertical="20dp"
+            android:contentDescription="@string/article_list_item_image_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/app_icon_blue" />
+
+        <ImageView
+            android:id="@+id/shopping_list_item_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopping_list_item_description"
+            style="@style/ArticleDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/article_list_item_text_margin_horizontal"
+            android:layout_marginTop="@dimen/article_list_item_description_margin_top"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            app:layout_constraintStart_toEndOf="@id/shopping_list_item_image"
+            app:layout_constraintTop_toBottomOf="@id/shopping_list_item_name"
+            tools:text="K Plus • 300g" />
+
+        <TextView
+            android:id="@+id/shopping_list_item_price"
+            style="@style/ArticlePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/article_list_item_text_margin_horizontal"
+            android:layout_marginTop="@dimen/article_list_item_description_margin_top"
+            app:layout_constraintStart_toEndOf="@id/shopping_list_item_image"
+            app:layout_constraintTop_toBottomOf="@id/shopping_list_item_description"
+            tools:text="100kn" />
+
+        <TextView
+            android:id="@+id/shopping_list_item_name"
+            style="@style/ArticleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/article_list_item_text_margin_horizontal"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            app:layout_constraintStart_toEndOf="@id/shopping_list_item_image"
+            app:layout_constraintTop_toTopOf="@id/shopping_list_item_image"
+            tools:text="Apples" />
+
+        <TextView
+            android:id="@+id/shopping_list_item_quantity"
+            style="@style/ArticleSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/sale_bg"
+            android:paddingHorizontal="@dimen/article_list_item_sale_icon_padding_horizontal"
+            android:paddingVertical="@dimen/article_list_item_sale_icon_padding_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/shopping_list_item_close"
+            tools:text="1" />
+
+        <ImageView
+            android:id="@+id/shopping_list_item_quantity_increase"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="4dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:rotation="90"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintBottom_toTopOf="@id/shopping_list_item_quantity"
+            app:layout_constraintEnd_toEndOf="@id/shopping_list_item_quantity"
+            app:layout_constraintStart_toStartOf="@id/shopping_list_item_quantity" />
+
+        <ImageView
+            android:id="@+id/shopping_list_item_quantity_decrease"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:rotation="270"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintTop_toBottomOf="@id/shopping_list_item_quantity"
+            app:layout_constraintEnd_toEndOf="@id/shopping_list_item_quantity"
+            app:layout_constraintStart_toStartOf="@id/shopping_list_item_quantity" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

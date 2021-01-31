@@ -20,6 +20,8 @@
     <string name="information_shops_title">Shops</string>
 
     <string name="toolbar_catalogue_title">Catalogue</string>
+    <string name="toolbar_shopping_list_title">Shopping List</string>
+    <string name="toolbar_wish_list_title">Wish List</string>
     <string name="toolbar_recipes_title">Recipes</string>
     <string name="toolbar_information_title">Information</string>
     <string name="toolbar_notifications_title">Notifications</string>

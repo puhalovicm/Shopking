@@ -31,11 +31,21 @@ class NavigationManagerImpl : NavigationManager {
     }
 
     override fun showShoppingListScreen(activity: AppCompatActivity) {
-        // TODO("Not yet implemented")
+        val shoppingListFragment = ShoppingListFragment.newInstance()
+        activity.supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out)
+            .replace(MAIN_ACTIVITY_CONTAINER, shoppingListFragment)
+            .commit()
     }
 
     override fun showWishListScreen(activity: AppCompatActivity) {
-        //        TODO("Not yet implemented")
+        val wishListFragment = WishListFragment.newInstance()
+        activity.supportFragmentManager
+            .beginTransaction()
+            .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out)
+            .replace(MAIN_ACTIVITY_CONTAINER, wishListFragment)
+            .commit()
     }
 
     override fun showRecipesScreen(activity: AppCompatActivity) {
@@ -102,10 +112,7 @@ class NavigationManagerImpl : NavigationManager {
     }
 
     override fun showShopOnMap(activity: AppCompatActivity, address: String) {
-        //        val gmmIntentUri = Uri.parse("geo:0,0?q=1600 Amphitheatre Parkway, Mountain+View, California")
         val gmmIntentUri = Uri.parse("geo:0,0?q=$address")
-
-        //        val gmmIntentUri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
         startActivity(activity, mapIntent, null)

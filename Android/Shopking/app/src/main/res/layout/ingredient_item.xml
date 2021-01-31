@@ -9,9 +9,10 @@
 
     <CheckBox
         android:id="@+id/ingredient_item_shopping_list"
-        style="?android:attr/textViewStyle"
+        android:button="@drawable/ic_shopping_list_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:layout_marginEnd="@dimen/article_list_item_sale_icon_margin_end" />
 
     <CheckBox
