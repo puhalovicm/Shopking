@@ -49,7 +49,7 @@ val applicationModule = module {
     }
 
     viewModel {
-        CatalogueViewModel(get(), get())
+        CatalogueViewModel(get(), get(), get())
     }
 
     viewModel {

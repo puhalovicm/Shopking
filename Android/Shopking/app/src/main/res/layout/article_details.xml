@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_details_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="6dp"
+        android:contentDescription="@string/article_list_item_image_description"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/sale_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/article_details_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/article_details_item_icon_height"
+        android:contentDescription="@string/article_list_item_image_description"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/app_icon_blue" />
+
+    <TextView
+        android:id="@+id/article_details_item_name"
+        style="@style/ArticleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/article_list_item_text_margin_horizontal"
+        android:layout_marginTop="@dimen/article_list_item_name_margin_top"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_image"
+        tools:text="Apples" />
+
+    <TextView
+        android:id="@+id/article_details_item_company_title"
+        style="@style/ArticleDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/article_details_item_text_margin_horizontal"
+        android:layout_marginTop="@dimen/article_list_item_description_margin_top"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/article_details_company"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_name" />
+
+    <TextView
+        android:id="@+id/article_details_item_company"
+        style="@style/ArticleDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/article_details_item_text_margin_horizontal"
+        android:layout_marginTop="@dimen/article_list_item_description_margin_top"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_name"
+        tools:text="K Plus • 300g" />
+
+    <TextView
+        android:id="@+id/article_details_item_mass_title"
+        style="@style/ArticleDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/article_details_item_text_margin_horizontal"
+        android:layout_marginTop="@dimen/article_list_item_description_margin_top"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/article_details_mass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_company_title" />
+
+    <TextView
+        android:id="@+id/article_details_item_mass"
+        style="@style/ArticleDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/article_details_item_text_margin_horizontal"
+        android:layout_marginTop="@dimen/article_list_item_description_margin_top"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_company_title"
+        tools:text="K Plus • 300g" />
+
+    <TextView
+        android:id="@+id/article_details_item_price_title"
+        style="@style/ArticleDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/article_details_item_text_margin_horizontal"
+        android:layout_marginTop="@dimen/article_list_item_description_margin_top"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="@string/article_details_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_mass_title" />
+
+    <TextView
+        android:id="@+id/article_details_item_price"
+        style="@style/ArticleDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/article_details_item_text_margin_horizontal"
+        android:layout_marginTop="@dimen/article_list_item_description_margin_top"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_mass_title"
+        tools:text="K Plus • 300g" />
+
+    <Button
+        style="@style/BlueButtonText"
+        android:id="@+id/article_details_item_shopping_list_button"
+        android:layout_width="0dp"
+        android:background="@drawable/bg_blue_button"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Add to Shopping List"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_price_title" />
+
+    <Button
+        style="@style/BlueButtonText"
+        android:id="@+id/article_details_item_wish_list_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_blue_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="Add to Wish List"
+        app:layout_constraintTop_toBottomOf="@id/article_details_item_shopping_list_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

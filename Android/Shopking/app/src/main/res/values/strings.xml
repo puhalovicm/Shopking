@@ -8,6 +8,9 @@
 
     <string name="article_list_item_image_description">Article image</string>
     <string name="article_list_sale">%</string>
+    <string name="article_details_company">Company</string>
+    <string name="article_details_mass">Mass</string>
+    <string name="article_details_price">Price</string>
 
     <string name="recipe_details_ingredients">Ingredients</string>
     <string name="recipe_details_recipe">Recipe</string>

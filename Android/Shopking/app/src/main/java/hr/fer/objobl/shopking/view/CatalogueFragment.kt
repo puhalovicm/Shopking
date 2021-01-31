@@ -3,6 +3,7 @@ package hr.fer.objobl.shopking.view
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -25,7 +26,7 @@ class CatalogueFragment : Fragment(R.layout.fragment_catalogue) {
 
     private lateinit var binding: FragmentCatalogueBinding
 
-    private val articleListAdapter: ArticleListAdapter by lazy { ArticleListAdapter() }
+    private val articleListAdapter: ArticleListAdapter by lazy { ArticleListAdapter { model.showArticleDetails(activity as AppCompatActivity, it) } }
     private val categoryListAdapter: CategoryListAdapter by lazy { CategoryListAdapter(model::selectCategory) }
 
     private val model: CatalogueViewModel by inject(parameters = { parametersOf() })

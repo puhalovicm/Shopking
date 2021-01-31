@@ -11,16 +11,23 @@ import hr.fer.objobl.shopking.utils.DiffCallback
 import hr.fer.objobl.shopking.utils.load
 import hr.fer.objobl.shopking.view.viewstate.ArticleViewState
 
-class ArticleListAdapter : ListAdapter<ArticleViewState, ArticleListAdapter.ArticleViewHolder>(DiffCallback()) {
+typealias OnArticleClickListener = (Long) -> Unit
+
+class ArticleListAdapter(
+    private val onArticleClickListener: OnArticleClickListener
+) : ListAdapter<ArticleViewState, ArticleListAdapter.ArticleViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false))
+        ArticleViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false), onArticleClickListener)
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 
-    class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ArticleViewHolder(
+        itemView: View,
+        private val onArticleClickListener: OnArticleClickListener
+    ) : RecyclerView.ViewHolder(itemView) {
         private val binding: CardItemBinding = CardItemBinding.bind(itemView)
 
         fun bind(article: ArticleViewState) = with(itemView) {
@@ -35,7 +42,7 @@ class ArticleListAdapter : ListAdapter<ArticleViewState, ArticleListAdapter.Arti
             }
 
             setOnClickListener {
-                // TODO: Handle on click
+                onArticleClickListener(article.id)
             }
         }
     }

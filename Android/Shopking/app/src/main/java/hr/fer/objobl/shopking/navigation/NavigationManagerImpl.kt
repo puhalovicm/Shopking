@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import hr.fer.objobl.shopking.R
 import hr.fer.objobl.shopking.view.*
+import hr.fer.objobl.shopking.view.viewstate.ArticleDetailsViewState
 import hr.fer.objobl.shopking.view.viewstate.RecipeDetailsViewState
 
 @IdRes
@@ -21,6 +22,12 @@ class NavigationManagerImpl : NavigationManager {
             .setCustomAnimations(R.anim.fade_in, R.anim.fade_out, R.anim.fade_in, R.anim.fade_out)
             .replace(MAIN_ACTIVITY_CONTAINER, catalogueFragment)
             .commit()
+    }
+
+    override fun showArticleDetails(activity: AppCompatActivity, viewState: ArticleDetailsViewState) {
+        ArticleDetailsSheetFragment.newInstance(viewState).apply {
+            show(activity.supportFragmentManager, ArticleDetailsSheetFragment.TAG)
+        }
     }
 
     override fun showShoppingListScreen(activity: AppCompatActivity) {
@@ -95,10 +102,10 @@ class NavigationManagerImpl : NavigationManager {
     }
 
     override fun showShopOnMap(activity: AppCompatActivity, address: String) {
-//        val gmmIntentUri = Uri.parse("geo:0,0?q=1600 Amphitheatre Parkway, Mountain+View, California")
+        //        val gmmIntentUri = Uri.parse("geo:0,0?q=1600 Amphitheatre Parkway, Mountain+View, California")
         val gmmIntentUri = Uri.parse("geo:0,0?q=$address")
 
-//        val gmmIntentUri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
+        //        val gmmIntentUri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
         startActivity(activity, mapIntent, null)
