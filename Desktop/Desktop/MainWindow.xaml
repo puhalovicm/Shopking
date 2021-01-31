@@ -27,12 +27,12 @@
         </Grid>
         
         <Grid x:Name="catalogue_grid" Visibility="Visible" Grid.Column="1">
-            <TextBlock>Catalogue</TextBlock>
-            <Button Content="Food" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="30,20,0,0" Click="Food_Click"/>
-            <Button Content="Beverage" Height="20" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="100,20,0,0" Click="Beverage_Click"/>
-            <Button Content="Clothing" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="180,20,0,0" Click="Clothing_Click"/>
-            <Button Content="Device" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="250,20,0,0" Click="Device_Click"/>
-            <Button Content="Toiletry" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="320,20,0,0" Click="Toiletry_Click"/>
+            <TextBlock Margin="0,20,0,0" FontSize="20">Catalogue</TextBlock>
+            <Button Content="Food" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="30,60,0,0" Click="Food_Click"/>
+            <Button Content="Beverage" Height="20" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="100,60,0,0" Click="Beverage_Click"/>
+            <Button Content="Clothing" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="180,60,0,0" Click="Clothing_Click"/>
+            <Button Content="Device" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="250,60,0,0" Click="Device_Click"/>
+            <Button Content="Toiletry" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="320,60,0,0" Click="Toiletry_Click"/>
 
             <DataGrid x:Name="dataGridItem" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" Height="269" Width="440">
                 <DataGrid.Columns>
@@ -51,7 +51,7 @@
             <Button x:Name="shoppingList" Content="ShoppingList" FontStyle="Italic" Height="30" HorizontalAlignment="Center" Width="100" Click="ShoppingList_Click" FontSize="16" />
         </Grid>
         <Grid x:Name="shopping_list_grid" Visibility="Hidden" Grid.Column="1">
-            <TextBlock>Shopping list</TextBlock>
+            <TextBlock Margin="0,20,0,0" FontSize="20">Shopping list</TextBlock>
 
             <DataGrid x:Name="dataGridShoppingList" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" Height="269" Width="440">
                 <DataGrid.Columns>
@@ -70,7 +70,7 @@
             <Button x:Name="wishList" Content="WishList" FontStyle="Italic" Height="30" HorizontalAlignment="Center" Width="100" Click="WishList_Click" FontSize="16" />
         </Grid>
         <Grid x:Name="wish_list_grid" Visibility="Hidden" Grid.Column="1">
-            <TextBlock>Wish list</TextBlock>
+            <TextBlock Margin="0,20,0,0" FontSize="20">Wish list</TextBlock>
 
             <DataGrid x:Name="dataGridWishList" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" Height="269" Width="440">
                 <DataGrid.Columns>
@@ -88,7 +88,7 @@
             <Button x:Name="recipes" Content="Recipes" FontStyle="Italic" Height="30" HorizontalAlignment="Center" Width="100" Click="Recipes_Click" FontSize="16" />
         </Grid>
         <Grid x:Name="recipes_grid" Visibility="Hidden" Grid.Column="1">
-            <TextBlock>Recipes</TextBlock>
+            <TextBlock Margin="0,20,0,0" FontSize="20">Recipes</TextBlock>
 
             
         </Grid>
@@ -97,6 +97,19 @@
             <Button x:Name="information" Content="Information" FontStyle="Italic" Height="30" HorizontalAlignment="Center" Width="100" Click="Information_Click" FontSize="16" />
         </Grid>
         <Grid x:Name="information_grid" Visibility="Hidden" Grid.Column="1">
+            <TextBlock Margin="0,20,0,0" FontSize="20">Information</TextBlock>
+            <DataGrid x:Name="dataGridInformations" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="100,100,0,0" VerticalAlignment="Top" Height="90" Width="440">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Info" Binding="{Binding Info}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <DataGrid x:Name="dataGridShops" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top" Height="100" Width="440">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                    <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
         
     </Grid>

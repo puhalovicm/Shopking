@@ -24,6 +24,9 @@ namespace Desktop
     {
         ItemContext itemContext = new ItemContext();
         RecipeContext recipeContext = new RecipeContext();
+        InformationContext informationContext = new InformationContext();
+        ShopContext shopContext = new ShopContext();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -155,6 +158,9 @@ namespace Desktop
             wish_list_grid.Visibility = Visibility.Hidden;
             recipes_grid.Visibility = Visibility.Hidden;
             information_grid.Visibility = Visibility.Visible;
+
+            dataGridInformations.ItemsSource = informationContext.informations;
+            dataGridShops.ItemsSource = shopContext.shops;
         }
 
     }
