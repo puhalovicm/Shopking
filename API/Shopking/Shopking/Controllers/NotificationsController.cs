@@ -9,15 +9,15 @@ namespace Shopking.Controllers
     [Route("api/notifications")]
     public class NotificationsController : ControllerBase
     {
-        private ItemRepository itemRepository;
+        private IItemRepository itemRepository;
 
-        public NotificationsController(ItemRepository itemRepository)
+        public NotificationsController(IItemRepository itemRepository)
         {
             this.itemRepository = itemRepository;
         }
 
         [HttpPost]
-        public IEnumerable<long> GetDetails([FromBody]List<long> ids)
+        public IEnumerable<long> GetNotificaitons([FromBody]List<long> ids)
         {
             return itemRepository.GetSaleItemsByIds(ids).ToList().Select(i => i.Id);
         }

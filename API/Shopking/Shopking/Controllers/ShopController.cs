@@ -11,9 +11,9 @@ namespace Shopking.Controllers
     [Route("api/shops")]
     public class ShopController : ControllerBase
     {
-        private readonly ShopRepository shopRepository;
+        private readonly IShopRepository shopRepository;
 
-        public ShopController(ShopRepository shopRepository)
+        public ShopController(IShopRepository shopRepository)
         {
             this.shopRepository = shopRepository;
         }

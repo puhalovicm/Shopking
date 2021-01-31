@@ -11,9 +11,9 @@ namespace Shopking.Controllers
     [Route("api/items")]
     public class ItemController : ControllerBase
     {
-        private readonly ItemRepository itemRepository;
+        private readonly IItemRepository itemRepository;
 
-        public ItemController(ItemRepository itemRepository)
+        public ItemController(IItemRepository itemRepository)
         {
             this.itemRepository = itemRepository;
         }
@@ -38,7 +38,7 @@ namespace Shopking.Controllers
         }
 
         [HttpGet("food")]
-        public IEnumerable<FoodDto> GetFoods()
+        public IEnumerable<Item> GetFoods()
         {
             return itemRepository.GetFoodItems();
         }

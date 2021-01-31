@@ -25,9 +25,9 @@ namespace Shopking
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Shopking", Version = "v1" });
             });
 
-            services.AddSingleton<RecipeRepository>();
-            services.AddSingleton<ShopRepository>();
-            services.AddSingleton<ItemRepository>();
+            services.AddSingleton<IRecipeRepository>(new RecipeRepository());
+            services.AddSingleton<IShopRepository>(new ShopRepository());
+            services.AddSingleton<IItemRepository>(new ItemRepository());
 
             services.AddControllers();
         }
