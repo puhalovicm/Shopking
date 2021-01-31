@@ -41,13 +41,5 @@ namespace Shopking.Dao
                 return session.Query<Recipe>().Where(r => r.Ingredients.Select(i => i.Name).Contains(ingredient)).ToList();
             }
         }
-
-        public IEnumerable<Ingredient> GetIngredients()
-        {
-            using (ISession session = NHibernateSession.OpenSession())
-            {
-                return session.Query<Ingredient>().ToList();
-            }
-        }
     }
 }

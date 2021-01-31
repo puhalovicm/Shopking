@@ -7,6 +7,7 @@ import hr.fer.objobl.shopking.data.mapper.mapToViewStateList
 import hr.fer.objobl.shopking.data.source.ArticleDataSource
 import hr.fer.objobl.shopking.data.source.NotificationDataSource
 import hr.fer.objobl.shopking.data.source.ShopDataSource
+import hr.fer.objobl.shopking.data.source.WishListDataSource
 import hr.fer.objobl.shopking.navigation.NavigationManager
 import hr.fer.objobl.shopking.utils.ShopkingStrings
 import hr.fer.objobl.shopking.view.viewstate.NotificationViewState
@@ -16,6 +17,7 @@ class InformationViewModel(
     private val notificationDataSource: NotificationDataSource,
     private val shopDataSource: ShopDataSource,
     private val articleDataSource: ArticleDataSource,
+    private val wishListDataSource: WishListDataSource,
     private val navigationManager: NavigationManager,
     private val shopkingStrings: ShopkingStrings
 ) : ViewModel() {
@@ -36,6 +38,20 @@ class InformationViewModel(
         shopDataSource.shops.observeForever {
             shops.postValue(it.mapToViewStateList())
         }
+
+        wishListDataSource.articles.value?.let {
+            fetchNotifications(it.map { it.id })
+        }
+
+        fetchShops()
+    }
+
+    private fun fetchNotifications(ids: List<Long>) {
+        notificationDataSource.fetchNotifications(ids)
+    }
+
+    private fun fetchShops() {
+        shopDataSource.fetchShops()
     }
 
     fun showNotificationsScreen(activity: AppCompatActivity) {

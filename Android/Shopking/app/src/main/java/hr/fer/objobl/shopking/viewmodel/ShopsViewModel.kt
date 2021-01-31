@@ -19,6 +19,12 @@ class ShopsViewModel(
         shopDataSource.shops.observeForever {
             shops.postValue(it.mapToViewStateList())
         }
+
+        fetchShops()
+    }
+
+    fun fetchShops() {
+        shopDataSource.fetchShops()
     }
 
     fun showShopOnMap(activity: AppCompatActivity, address: String) {
