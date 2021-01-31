@@ -13,9 +13,9 @@ namespace Shopking.Controllers
     [Route("api/recipes")]
     public class RecipeController : ControllerBase
     {
-        private readonly RecipeRepository recipeRepository;
+        private readonly IRecipeRepository recipeRepository;
 
-        public RecipeController(RecipeRepository recipeRepository)
+        public RecipeController(IRecipeRepository recipeRepository)
         {
             this.recipeRepository = recipeRepository;
         }
