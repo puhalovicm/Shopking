@@ -1,0 +1,15 @@
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\bin\Debug\Desktop.exe.config
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\bin\Debug\Desktop.exe
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\bin\Debug\Desktop.pdb
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop.csprojAssemblyReference.cache
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\MainWindow.g.cs
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\App.g.cs
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop_MarkupCompile.cache
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop_MarkupCompile.lref
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\MainWindow.baml
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop.g.resources
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop.Properties.Resources.resources
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop.csproj.GenerateResource.cache
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop.exe
+C:\Users\sjerkovic\Desktop\Shopking\Desktop\Desktop\obj\Debug\Desktop.pdb
