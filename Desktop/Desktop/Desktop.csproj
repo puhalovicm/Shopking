@@ -71,8 +71,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Beverage.cs" />
+    <Compile Include="Model\Clothing.cs" />
+    <Compile Include="Model\Device.cs" />
+    <Compile Include="Model\Food.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\Recipe.cs" />
+    <Compile Include="Model\Toiletry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

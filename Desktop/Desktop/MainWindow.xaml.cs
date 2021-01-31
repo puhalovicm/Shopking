@@ -40,12 +40,72 @@ namespace Desktop
             information_grid.Visibility = Visibility.Hidden;
         }
 
-        private void Food_Click(object sender, RoutedEventArgs e) { }
+        private void Food_Click(object sender, RoutedEventArgs e) 
+        {
+            List<Food> foodList = new List<Food>();
+            foreach (Item item in itemContext.Items)
+            {
+                if (item is Food)
+                {
+                    foodList.Add((Food)item);
+                }
+            }
 
-        private void Beverage_Click(object sender, RoutedEventArgs e) { }
-        private void Clothing_Click(object sender, RoutedEventArgs e) { }
-        private void Device_Click(object sender, RoutedEventArgs e) { }
-        private void Toiletry_Click(object sender, RoutedEventArgs e) { }
+            dataGridItem.ItemsSource = foodList;
+        }
+
+        private void Beverage_Click(object sender, RoutedEventArgs e) 
+        {
+            List<Beverage> beverageList = new List<Beverage>();
+            foreach (Item item in itemContext.Items)
+            {
+                if (item is Beverage)
+                {
+                    beverageList.Add((Beverage)item);
+                }
+            }
+
+            dataGridItem.ItemsSource = beverageList;
+        }
+        private void Clothing_Click(object sender, RoutedEventArgs e) 
+        {
+            List<Clothing> clothingItems = new List<Clothing>();
+            foreach (Item item in itemContext.Items)
+            {
+                if (item is Clothing)
+                {
+                    clothingItems.Add((Clothing)item);
+                }
+            }
+
+            dataGridItem.ItemsSource = clothingItems;
+        }
+        private void Device_Click(object sender, RoutedEventArgs e) 
+        {
+            List<Device> deviceList = new List<Device>();
+            foreach (Item item in itemContext.Items)
+            {
+                if (item is Device)
+                {
+                    deviceList.Add((Device)item);
+                }
+            }
+
+            dataGridItem.ItemsSource = deviceList;
+        }
+        private void Toiletry_Click(object sender, RoutedEventArgs e) 
+        {
+            List<Toiletry> toiletryList = new List<Toiletry>();
+            foreach (Item item in itemContext.Items)
+            {
+                if (item is Toiletry)
+                {
+                    toiletryList.Add((Toiletry)item);
+                }
+            }
+
+            dataGridItem.ItemsSource = toiletryList;
+        }
         private void ShoppingList_Click(object sender, RoutedEventArgs e) {
             catalogue_grid.Visibility = Visibility.Hidden;
             shopping_list_grid.Visibility = Visibility.Visible;
