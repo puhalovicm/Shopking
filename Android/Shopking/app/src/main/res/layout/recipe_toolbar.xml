@@ -7,26 +7,34 @@
     android:background="@drawable/bg_toolbar"
     android:outlineProvider="bounds">
 
-    <ImageView
-        android:id="@+id/recipe_toolbar_icon"
-        android:layout_width="50dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/recipe_toolbar_title"
-        app:layout_constraintEnd_toStartOf="@id/recipe_toolbar_title"
-        app:layout_constraintTop_toTopOf="@id/recipe_toolbar_title"
-        tools:src="@drawable/ic_recipe_red" />
-
-    <TextView
-        android:id="@+id/recipe_toolbar_title"
-        style="@style/ToolbarTitle"
+    <LinearLayout
+        android:id="@+id/recipe_toolbar_title_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/toolbar_title_margin_bottom"
         android:layout_marginTop="@dimen/toolbar_title_margin_top"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Recipe" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/recipe_toolbar_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            tools:src="@drawable/ic_catalouge_red" />
+
+        <TextView
+            android:id="@+id/recipe_toolbar_title"
+            style="@style/ToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="Recipe" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/recipe_toolbar_description"
@@ -39,7 +47,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recipe_toolbar_title"
+        app:layout_constraintTop_toBottomOf="@id/recipe_toolbar_title_top"
         tools:text="Easy • 30 min" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
