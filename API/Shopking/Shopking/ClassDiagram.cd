@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Shopking.Models.Beverage" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Models\Beverage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Clothing" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Clothing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Device" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Device.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Food" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\Food.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Item" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAQAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Recipe" Collapsed="true">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAQAAAAAAACQAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Recipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Shop" Collapsed="true">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Shop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Toiletry" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Models\Toiletry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Dto.BeverageDto" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAQAAAAAAAAAAAAQAAAAAAAAAAAIABAAAAAA=</HashCode>
+      <FileName>Models\Dto\BeverageDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Dto.ClothingDto" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAQAAgAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\Dto\ClothingDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Dto.DeviceDto" Collapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAIAAAQAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\Dto\DeviceDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Dto.FoodDto" Collapsed="true">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAQAAAAAAAAAAAAQAAAAAAAAAAAAABACAAAA=</HashCode>
+      <FileName>Models\Dto\FoodDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Dto.IngredientDto" Collapsed="true">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dto\IngredientDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Dto.ItemDto" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAQAAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Models\Dto\ItemDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Dto.RecipeDto" Collapsed="true">
+    <Position X="4.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAQAAAAAAACQAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dto\RecipeDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Dto.ToiletryDto" Collapsed="true">
+    <Position X="1" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAQAAAAAAAAAAAAQAAAAAAAAAAAAABACAAAA=</HashCode>
+      <FileName>Models\Dto\ToiletryDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Mapper.BeverageMapper" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapper\BeverageMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Mapper.ClothingMapper" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapper\ClothingMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Mapper.DeviceMapper" Collapsed="true">
+    <Position X="1" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapper\DeviceMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Mapper.FoodMapper" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapper\FoodMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Mapper.ItemMapper" Collapsed="true">
+    <Position X="1" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapper\ItemMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Mapper.RecipeMapper" Collapsed="true">
+    <Position X="6.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapper\RecipeMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Models.Mapper.ToiletryMapper" Collapsed="true">
+    <Position X="2.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapper\ToiletryMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Controllers.ItemController" Collapsed="true">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAQQAQAAAAQBCBAAAAAAAEAAQBgAAABAAAAAAAAIAA=</HashCode>
+      <FileName>Controllers\ItemController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Controllers.NotificationsController" Collapsed="true">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\NotificationsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Controllers.RecipeController" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAABAAAAAAAAAAAAgAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\RecipeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Controllers.ShopController" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\ShopController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shopking.Dao.ItemRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARgACABAAEAAAAAAQAACABAEEgAAAAABAAAABAA=</HashCode>
+      <FileName>Dao\ItemRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Shopking.Dao.RecipeRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAIAAAAAAAgAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dao\RecipeRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Shopking.Dao.ShopRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Dao\ShopRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Shopking.Dao.IItemRepository" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARgACABAAEAAAAAAQAACABAEEgAAAAABAAAABAA=</HashCode>
+      <FileName>Dao\IItemRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Shopking.Dao.IRecipeRepository" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dao\IRecipeRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Shopking.Dao.IShopRepository" Collapsed="true">
+    <Position X="11" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Dao\IShopRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Shopking.Models.RecipeDifficulty" Collapsed="true">
+    <Position X="1" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAgAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Models\RecipeDifficulty.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
