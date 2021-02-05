@@ -18,6 +18,7 @@ namespace Shopking
                         .ConnectionString("User ID=username;Password=password;Host=localhost;Port=5432;Database=shopkingdb")
                         .AdoNetBatchSize(100))
                 .Mappings(mappings => mappings.FluentMappings.AddFromAssemblyOf<Shop>())
+                .Mappings(mappings => mappings.FluentMappings.AddFromAssemblyOf<Item>())
                 .BuildConfiguration();
 
             var sessionFactory = nhConfig.BuildSessionFactory();

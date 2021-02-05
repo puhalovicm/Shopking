@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D6F565C925CDC7AA003DD518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F565C825CDC7AA003DD518 /* AppDelegate.swift */; };
+		D6F565CB25CDC7AA003DD518 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F565CA25CDC7AA003DD518 /* SceneDelegate.swift */; };
+		D6F565CD25CDC7AA003DD518 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F565CC25CDC7AA003DD518 /* ViewController.swift */; };
+		D6F565D025CDC7AA003DD518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F565CE25CDC7AA003DD518 /* Main.storyboard */; };
+		D6F565D325CDC7AA003DD518 /* Shopking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6F565D125CDC7AA003DD518 /* Shopking.xcdatamodeld */; };
+		D6F565D525CDC7AC003DD518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F565D425CDC7AC003DD518 /* Assets.xcassets */; };
+		D6F565D825CDC7AC003DD518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F565D625CDC7AC003DD518 /* LaunchScreen.storyboard */; };
+		D6F565E325CDC7AD003DD518 /* ShopkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F565E225CDC7AD003DD518 /* ShopkingTests.swift */; };
+		D6F565EE25CDC7AD003DD518 /* ShopkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F565ED25CDC7AD003DD518 /* ShopkingUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6F565DF25CDC7AC003DD518 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6F565BD25CDC7AA003DD518 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6F565C425CDC7AA003DD518;
+			remoteInfo = Shopking;
+		};
+		D6F565EA25CDC7AD003DD518 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6F565BD25CDC7AA003DD518 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6F565C425CDC7AA003DD518;
+			remoteInfo = Shopking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D6F565C525CDC7AA003DD518 /* Shopking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shopking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F565C825CDC7AA003DD518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6F565CA25CDC7AA003DD518 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D6F565CC25CDC7AA003DD518 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6F565CF25CDC7AA003DD518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D6F565D225CDC7AA003DD518 /* Shopking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shopking.xcdatamodel; sourceTree = "<group>"; };
+		D6F565D425CDC7AC003DD518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6F565D725CDC7AC003DD518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D6F565D925CDC7AC003DD518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F565DE25CDC7AC003DD518 /* ShopkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F565E225CDC7AD003DD518 /* ShopkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopkingTests.swift; sourceTree = "<group>"; };
+		D6F565E425CDC7AD003DD518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F565E925CDC7AD003DD518 /* ShopkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F565ED25CDC7AD003DD518 /* ShopkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopkingUITests.swift; sourceTree = "<group>"; };
+		D6F565EF25CDC7AD003DD518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6F565C225CDC7AA003DD518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F565DB25CDC7AC003DD518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F565E625CDC7AD003DD518 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D6F565BC25CDC7AA003DD518 = {
+			isa = PBXGroup;
+			children = (
+				D6F565C725CDC7AA003DD518 /* Shopking */,
+				D6F565E125CDC7AD003DD518 /* ShopkingTests */,
+				D6F565EC25CDC7AD003DD518 /* ShopkingUITests */,
+				D6F565C625CDC7AA003DD518 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D6F565C625CDC7AA003DD518 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6F565C525CDC7AA003DD518 /* Shopking.app */,
+				D6F565DE25CDC7AC003DD518 /* ShopkingTests.xctest */,
+				D6F565E925CDC7AD003DD518 /* ShopkingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6F565C725CDC7AA003DD518 /* Shopking */ = {
+			isa = PBXGroup;
+			children = (
+				D6F565C825CDC7AA003DD518 /* AppDelegate.swift */,
+				D6F565CA25CDC7AA003DD518 /* SceneDelegate.swift */,
+				D6F565CC25CDC7AA003DD518 /* ViewController.swift */,
+				D6F565CE25CDC7AA003DD518 /* Main.storyboard */,
+				D6F565D425CDC7AC003DD518 /* Assets.xcassets */,
+				D6F565D625CDC7AC003DD518 /* LaunchScreen.storyboard */,
+				D6F565D925CDC7AC003DD518 /* Info.plist */,
+				D6F565D125CDC7AA003DD518 /* Shopking.xcdatamodeld */,
+			);
+			path = Shopking;
+			sourceTree = "<group>";
+		};
+		D6F565E125CDC7AD003DD518 /* ShopkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6F565E225CDC7AD003DD518 /* ShopkingTests.swift */,
+				D6F565E425CDC7AD003DD518 /* Info.plist */,
+			);
+			path = ShopkingTests;
+			sourceTree = "<group>";
+		};
+		D6F565EC25CDC7AD003DD518 /* ShopkingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D6F565ED25CDC7AD003DD518 /* ShopkingUITests.swift */,
+				D6F565EF25CDC7AD003DD518 /* Info.plist */,
+			);
+			path = ShopkingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6F565C425CDC7AA003DD518 /* Shopking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6F565F225CDC7AD003DD518 /* Build configuration list for PBXNativeTarget "Shopking" */;
+			buildPhases = (
+				D6F565C125CDC7AA003DD518 /* Sources */,
+				D6F565C225CDC7AA003DD518 /* Frameworks */,
+				D6F565C325CDC7AA003DD518 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shopking;
+			productName = Shopking;
+			productReference = D6F565C525CDC7AA003DD518 /* Shopking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6F565DD25CDC7AC003DD518 /* ShopkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6F565F525CDC7AD003DD518 /* Build configuration list for PBXNativeTarget "ShopkingTests" */;
+			buildPhases = (
+				D6F565DA25CDC7AC003DD518 /* Sources */,
+				D6F565DB25CDC7AC003DD518 /* Frameworks */,
+				D6F565DC25CDC7AC003DD518 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6F565E025CDC7AC003DD518 /* PBXTargetDependency */,
+			);
+			name = ShopkingTests;
+			productName = ShopkingTests;
+			productReference = D6F565DE25CDC7AC003DD518 /* ShopkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D6F565E825CDC7AD003DD518 /* ShopkingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6F565F825CDC7AD003DD518 /* Build configuration list for PBXNativeTarget "ShopkingUITests" */;
+			buildPhases = (
+				D6F565E525CDC7AD003DD518 /* Sources */,
+				D6F565E625CDC7AD003DD518 /* Frameworks */,
+				D6F565E725CDC7AD003DD518 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6F565EB25CDC7AD003DD518 /* PBXTargetDependency */,
+			);
+			name = ShopkingUITests;
+			productName = ShopkingUITests;
+			productReference = D6F565E925CDC7AD003DD518 /* ShopkingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6F565BD25CDC7AA003DD518 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					D6F565C425CDC7AA003DD518 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					D6F565DD25CDC7AC003DD518 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = D6F565C425CDC7AA003DD518;
+					};
+					D6F565E825CDC7AD003DD518 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = D6F565C425CDC7AA003DD518;
+					};
+				};
+			};
+			buildConfigurationList = D6F565C025CDC7AA003DD518 /* Build configuration list for PBXProject "Shopking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6F565BC25CDC7AA003DD518;
+			productRefGroup = D6F565C625CDC7AA003DD518 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6F565C425CDC7AA003DD518 /* Shopking */,
+				D6F565DD25CDC7AC003DD518 /* ShopkingTests */,
+				D6F565E825CDC7AD003DD518 /* ShopkingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6F565C325CDC7AA003DD518 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F565D825CDC7AC003DD518 /* LaunchScreen.storyboard in Resources */,
+				D6F565D525CDC7AC003DD518 /* Assets.xcassets in Resources */,
+				D6F565D025CDC7AA003DD518 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F565DC25CDC7AC003DD518 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F565E725CDC7AD003DD518 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6F565C125CDC7AA003DD518 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F565D325CDC7AA003DD518 /* Shopking.xcdatamodeld in Sources */,
+				D6F565CD25CDC7AA003DD518 /* ViewController.swift in Sources */,
+				D6F565C925CDC7AA003DD518 /* AppDelegate.swift in Sources */,
+				D6F565CB25CDC7AA003DD518 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F565DA25CDC7AC003DD518 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F565E325CDC7AD003DD518 /* ShopkingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F565E525CDC7AD003DD518 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F565EE25CDC7AD003DD518 /* ShopkingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6F565E025CDC7AC003DD518 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6F565C425CDC7AA003DD518 /* Shopking */;
+			targetProxy = D6F565DF25CDC7AC003DD518 /* PBXContainerItemProxy */;
+		};
+		D6F565EB25CDC7AD003DD518 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6F565C425CDC7AA003DD518 /* Shopking */;
+			targetProxy = D6F565EA25CDC7AD003DD518 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D6F565CE25CDC7AA003DD518 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6F565CF25CDC7AA003DD518 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D6F565D625CDC7AC003DD518 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6F565D725CDC7AC003DD518 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D6F565F025CDC7AD003DD518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D6F565F125CDC7AD003DD518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6F565F325CDC7AD003DD518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Shopking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hr.fer.teamopolis.Shopking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6F565F425CDC7AD003DD518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Shopking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hr.fer.teamopolis.Shopking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D6F565F625CDC7AD003DD518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShopkingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hr.fer.teamopolis.ShopkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopking.app/Shopking";
+			};
+			name = Debug;
+		};
+		D6F565F725CDC7AD003DD518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShopkingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hr.fer.teamopolis.ShopkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopking.app/Shopking";
+			};
+			name = Release;
+		};
+		D6F565F925CDC7AD003DD518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShopkingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hr.fer.teamopolis.ShopkingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Shopking;
+			};
+			name = Debug;
+		};
+		D6F565FA25CDC7AD003DD518 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShopkingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hr.fer.teamopolis.ShopkingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Shopking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6F565C025CDC7AA003DD518 /* Build configuration list for PBXProject "Shopking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F565F025CDC7AD003DD518 /* Debug */,
+				D6F565F125CDC7AD003DD518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F565F225CDC7AD003DD518 /* Build configuration list for PBXNativeTarget "Shopking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F565F325CDC7AD003DD518 /* Debug */,
+				D6F565F425CDC7AD003DD518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F565F525CDC7AD003DD518 /* Build configuration list for PBXNativeTarget "ShopkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F565F625CDC7AD003DD518 /* Debug */,
+				D6F565F725CDC7AD003DD518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F565F825CDC7AD003DD518 /* Build configuration list for PBXNativeTarget "ShopkingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F565F925CDC7AD003DD518 /* Debug */,
+				D6F565FA25CDC7AD003DD518 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D6F565D125CDC7AA003DD518 /* Shopking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6F565D225CDC7AA003DD518 /* Shopking.xcdatamodel */,
+			);
+			currentVersion = D6F565D225CDC7AA003DD518 /* Shopking.xcdatamodel */;
+			path = Shopking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D6F565BD25CDC7AA003DD518 /* Project object */;
+}
